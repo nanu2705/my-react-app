@@ -1,0 +1,35 @@
+@mixin max900{
+    @media only screen and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin max725{
+    @media only screen and (max-width: 725px) {
+        @content;
+    }
+}
+
+@mixin max600{
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin max525{
+    @media only screen and (max-width: 525px) {
+        @content;
+    }
+}
+
+@mixin max400{
+    @media only screen and (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin min900{
+    @media only screen and (min-width: 900px) {
+        @content;
+    }
+}

@@ -1,0 +1,143 @@
+@import "../Mixin.scss";
+
+.services-section {
+    padding: 0rem 1rem;
+    background-color: #f9fafb;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    // Header Styling
+    .section-header {
+      margin-bottom: 4rem;
+  
+      h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.25rem;
+        color: #4b5563;
+        max-width: 750px;
+        margin: 0 auto;
+      }
+    }
+  
+    // Grid Layout
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      
+  
+      @include max900{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include max600{
+        grid-template-columns: repeat(1, 1fr);
+      }
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+    // Service Card Styling
+    .service-card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;    
+      transition: box-shadow 0.3s ease-in-out;
+      text-align: center;
+  
+      &:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+  
+      // Icon Styling
+      .icon-wrapper {
+        width: 3.5rem;
+        height: 3.5rem;
+        background: #dbeafe;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        transition: background 0.3s ease-in-out;
+  
+        .icon {
+          width: 2rem;
+          height: 2rem;
+          stroke: #2563eb;
+          transition: stroke 0.3s ease-in-out;
+        }
+      }
+  
+      &:hover .icon-wrapper {
+        background: #2563eb;
+  
+        .icon {
+          stroke: white;
+        }
+      }
+  
+      h3 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-bottom: 0.75rem;
+      }
+  
+      p {
+        color: #4b5563;
+        margin-bottom: 1rem;
+      }
+  
+      .learn-more {
+        display: inline-block;
+        color: #2563eb;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+  
+        &:hover {
+          color: #1e3a8a;
+        }
+      }
+    }
+  
+    // View All Button
+    .view-all {
+      margin-top: 3rem;
+  
+      .view-all-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        border: 2px solid #2563eb;
+        color: #2563eb;
+        font-weight: bold;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+  
+        &:hover {
+          background: #2563eb;
+          color: white;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,130 @@
+@import "../Mixin.scss";
+
+
+.footer {
+    background-color: #1e3a8a; /* bg-blue-900 */
+    color: white;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Footer Main Section */
+  .footer-main {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 2rem;
+
+    @include max900{
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: start;
+    }
+
+    @include max725{
+        grid-template-columns: 1fr 1fr;
+        text-align: start;
+    }
+
+    @include max600{
+        grid-template-columns: 1fr 1fr;
+        text-align: start;
+    }
+
+    @include max525{
+        grid-template-columns: 1fr;
+        padding: 2rem 0;
+        gap: 0px;
+        text-align: start;
+    }
+  }
+  
+  
+  /* Company Info */
+  .company-info {
+    margin-bottom: 2rem;
+  }
+  
+  .footer-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .footer-subtext {
+    color: #d1d5db; /* text-gray-300 */
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #3b82f6; /* blue-400 */
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* Quick Links, Services, Contact Info */
+  .footer-header {
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  ul li a:hover {
+    color: white;
+  }
+  
+  /* Bottom Bar */
+  .bottom-bar {
+    border-top: 1px solid #3b82f6; /* blue-800 */
+    padding: 2rem 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-policy-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-policy-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 0.875rem;
+  }
+  
+  .footer-policy-links a:hover {
+    color: white;
+  }
+  

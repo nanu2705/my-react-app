@@ -1,0 +1,133 @@
+ @import "../Mixin.scss";
+
+.section-case-studies {
+    padding: 5rem 2rem;
+    background-color: #f9fafb;
+    text-align: center;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-bottom: 1rem;
+      }
+  
+      .section-description {
+        font-size: 1.25rem;
+        color: #4b5563;
+        margin-bottom: 3rem;
+      }
+    }
+    
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+  
+      @include max525{
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .case-study-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+  
+        &:hover {
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+  
+        .case-study-icon {
+          font-size: 4rem;
+          background: linear-gradient(to right, #2563eb, #1d4ed8);
+          color: white;
+          padding: 2rem;
+        }
+  
+        .case-study-content {
+          padding: 1.5rem;
+          .case-category {
+            font-size: 0.875rem;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+          }
+          .case-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+          }
+          .case-description {
+            color: #6b7280;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+          .case-footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: #6b7280;
+            .case-link {
+              color: #2563eb;
+              cursor: pointer;
+              font-weight: 500;
+              transition: color 0.3s;
+              &:hover {
+                color: #1d4ed8;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+      
+     @include max525{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-item {
+        text-align: center;
+        .stat-value {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #2563eb;
+          margin-bottom: 0.5rem;
+        }
+        .stat-label {
+          font-size: 1rem;
+          color: #6b7280;
+        }
+      }
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border: 2px solid #2563eb;
+      color: #2563eb;
+      font-weight: bold;
+      border-radius: 999px;
+      transition: all 0.3s;
+      text-decoration: none;
+      &:hover {
+        background-color: #2563eb;
+        color: white;
+      }
+    }
+  }
+  

@@ -1,0 +1,120 @@
+@import "../Mixin.scss";
+
+.why-choose-section {
+    padding: 1rem 1rem;
+    background-color: #f9fafb;
+  
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    
+  
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+  
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #4b5563;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    
+      @include max600{
+        display: none;
+      }
+  
+    .feature-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease-in-out;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+    
+  
+    .icon-container {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1rem;
+      background-color: #dbeafe;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+  
+    .feature-description {
+      color: #6b7280;
+    }
+}
+}
+
+ .mobile-grid{
+  display: none;
+
+  @include max600{
+    display: block;
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+   
+
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease-in-out;
+      height: 350px;
+      width: 450px;
+      margin: 10px 10px;
+      padding: 10px;
+  
+    .icon-container {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      background-color: #dbeafe;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+  
+    .feature-description {
+      color: #6b7280;
+      width: 150px;
+     
+    }
+}
+  }
+ }
+  }
+}
+  

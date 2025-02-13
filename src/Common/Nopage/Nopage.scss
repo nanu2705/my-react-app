@@ -1,0 +1,81 @@
+/* Nopage.scss */
+
+.nopage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0a0f1b;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .error-content {
+    margin-bottom: 20px;
+  }
+  
+  .error-code {
+    font-size: 120px;
+    font-weight: bold;
+    color: #f04e30;
+    margin: 0;
+    animation: pop-up 1s ease-in-out;
+  }
+  
+  .error-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    animation: fade-in 1.5s ease-in-out;
+  }
+  
+  .error-message {
+    font-size: 18px;
+    color: #c0c7d6;
+    margin-bottom: 20px;
+    animation: fade-in 2s ease-in-out;
+  }
+  
+  .back-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f04e30;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    animation: slide-up 1.5s ease-in-out;
+
+    &:hover {
+        background-color: #d93d20;
+      }
+  }
+  
+  
+  
+ 
+  
+  @keyframes pop-up {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-up {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes rotate-in {
+    from { transform: rotate(-180deg); opacity: 0; }
+    to { transform: rotate(0); opacity: 1; }
+  }

@@ -1,0 +1,105 @@
+@import "../Mixin.scss";
+
+.about-section {
+    padding: 5rem 0;
+    background-color: white;
+  
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  
+  
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @include max900{
+        flex-direction: column;
+    }
+    .visual-element{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: auto;
+          }
+    }
+
+    .text-content{
+        flex: 1;
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #1e40af;
+        margin-bottom: 1.5rem;
+      }
+
+      .description {
+        color: #4b5563;
+        margin-bottom: 2rem;
+        text-align: start;
+      }
+
+      .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+
+        .feature-box {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+
+            .feature-icon {
+                width: 3rem;
+                height: 3rem;
+                background: #dbeafe;
+                border-radius: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    color: #2563eb;
+                  }
+              }
+
+              .feature-text{
+                flex: 1;
+              
+               .feature-title {
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: #1e40af;
+                margin-bottom: 0.5rem;
+                text-align: start;
+                }
+
+                p{
+                 
+                    text-align: start;
+                }
+            }
+          }
+
+      }
+    }
+  }
+  
+  
+  
+ 
+  
+  
+}
+}

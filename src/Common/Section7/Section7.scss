@@ -1,0 +1,89 @@
+@import "../Mixin.scss";    
+
+.team-section {
+    padding: 5rem 2rem;
+    background-color: #fff;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    .team-header {
+      margin-bottom: 3rem;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1e3a8a;
+      }
+      p {
+        font-size: 1.25rem;
+        color: #4b5563;
+      }
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+
+      @include max400{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+    .team-card {
+      background: #f3f4f6;
+      border-radius: 12px;
+      overflow: hidden;
+      .team-icon {
+        height: 300px;
+        background: linear-gradient(to bottom right, #2563eb, #1d4ed8);
+
+        @include max400{
+          height: 250px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .team-content {
+        padding: 1.5rem;
+        h3 {
+          font-size: 1.5rem;
+          color: #1e3a8a;
+        }
+        .certification, .experience {
+          color: #6b7280;
+        }
+        .skills {
+          margin-top: 0.5rem;
+          .skill {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            margin: 0.25rem;
+            background-color: #dbeafe;
+            color: #2563eb;
+            border-radius: 999px;
+          }
+        }
+      }
+    }
+    .team-stats {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 2rem;
+      background-color: #2563eb;
+      border-radius: 12px;
+      padding: 2rem;
+      color: #fff;
+      .stat {
+        .value {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        .label {
+          font-size: 0.875rem;
+          opacity: 0.8;
+        }
+      }
+    }
+  }

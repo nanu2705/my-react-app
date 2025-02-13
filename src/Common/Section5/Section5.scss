@@ -1,0 +1,150 @@
+ @import "../Mixin.scss";
+
+/* General Section Styling */
+.expertise-section {
+    padding: 5rem 1rem;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+  
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-bottom: 1rem;
+      }
+  
+      .section-description {
+        font-size: 1.25rem;
+        color: #4b5563;
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  /* Grid Layout */
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  
+    @include max900{
+        display: flex;
+        flex-direction: column;
+    }
+   
+  }
+  
+  /* Certifications */
+  .certifications-container,
+  .skills-container {
+    background: #f9fafb;
+    border-radius: 1rem;
+    padding: 2rem;
+    
+  
+    .certifications-title,
+    .skills-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #1e3a8a;
+      margin-bottom: 1.5rem;
+    }
+  
+    .certification-item {
+      background: white;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 0.75rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s ease-in-out;
+      text-align: center;
+  
+      &:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      }
+  
+      .certification-name {
+        font-weight: bold;
+        color: #2563eb;
+      }
+  
+      .certification-desc {
+        font-size: 0.875rem;
+        color: #6b7280;
+      }
+    }
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    .skill-item {
+      margin-bottom: 1rem;
+  
+      .skill-title {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        color: #374151;
+      }
+  
+      .skill-bar-container {
+        width: 100%;
+        background: #e5e7eb;
+        border-radius: 9999px;
+        height: 0.5rem;
+  
+        .skill-bar {
+          background: #2563eb;
+          height: 100%;
+          border-radius: 9999px;
+          transition: width 0.7s ease-in-out;
+        }
+      }
+    }
+  }
+  
+  /* Stats */
+  .stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  
+    .stat-box {
+      background: #2563eb;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      text-align: center;
+  
+      .stat-value {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+  
+      .stat-label {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .expertise-section {
+      padding: 3rem 1rem;
+    }
+  
+    .section-header .section-title {
+      font-size: 2rem;
+    }
+  
+    .stats-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
