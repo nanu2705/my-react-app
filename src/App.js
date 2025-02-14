@@ -6,9 +6,9 @@ import Header from './Common/Header/Header';
 import AllServices from './Common/Section2/AllServices/AllServices';
 import Contact from './Common/Contact/Contact';
 import Footer from './Common/Footer/Footer';
-import GoToTop from './Common/GoToTop';
-import ScrollToTop from 'react-scroll-to-top';
-import { ArrowBigUpIcon } from 'lucide-react';
+// import GoToTop from './Common/GoToTop';
+// import ScrollToTop from 'react-scroll-to-top';
+// import { ArrowBigUpIcon } from 'lucide-react';
 import Loader from './Common/Loader/Loader';
 import Nopage from './Common/Nopage/Nopage';
 
@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       
        <BrowserRouter>
-       <GoToTop/>
+       {/* <GoToTop/> */}
        <Header/>
        <Loader/>
        <Routes>
@@ -31,7 +31,7 @@ function App() {
        </Routes>
 
       <Footer/>
-      <ScrollToTop className='scrolltop' smooth component={<ArrowBigUpIcon/>} />
+      {/* <ScrollToTop className='scrolltop' smooth component={<ArrowBigUpIcon/>} /> */}
       
        </BrowserRouter>
     </div>
