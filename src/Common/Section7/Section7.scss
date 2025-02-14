@@ -1,7 +1,7 @@
 @import "../Mixin.scss";    
 
 .team-section {
-    padding: 5rem 2rem;
+    padding: 0rem 2rem 2rem;
     background-color: #fff;
     text-align: center;
     max-width: 1200px;
@@ -26,46 +26,51 @@
       @include max400{
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       }
-    }
-    .team-card {
-      background: #f3f4f6;
-      border-radius: 12px;
-      overflow: hidden;
-      .team-icon {
-        height: 300px;
-        background: linear-gradient(to bottom right, #2563eb, #1d4ed8);
 
-        @include max400{
-          height: 250px;
-        }
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+      @include max600{
+        display: none;
       }
-      .team-content {
-        padding: 1.5rem;
-        h3 {
-          font-size: 1.5rem;
-          color: #1e3a8a;
+      .team-card {
+        background: #f3f4f6;
+        border-radius: 12px;
+        overflow: hidden;
+        .team-icon {
+          height: 300px;
+          background: linear-gradient(to bottom right, #2563eb, #1d4ed8);
+  
+          @include max400{
+            height: 250px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
-        .certification, .experience {
-          color: #6b7280;
-        }
-        .skills {
-          margin-top: 0.5rem;
-          .skill {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            margin: 0.25rem;
-            background-color: #dbeafe;
-            color: #2563eb;
-            border-radius: 999px;
+        .team-content {
+          padding: 1.5rem;
+          h3 {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+          }
+          .certification, .experience {
+            color: #6b7280;
+          }
+          .skills {
+            margin-top: 0.5rem;
+            .skill {
+              display: inline-block;
+              padding: 0.25rem 0.75rem;
+              margin: 0.25rem;
+              background-color: #dbeafe;
+              color: #2563eb;
+              border-radius: 999px;
+            }
           }
         }
       }
     }
+   
     .team-stats {
       margin-top: 4rem;
       display: grid;
@@ -75,6 +80,10 @@
       border-radius: 12px;
       padding: 2rem;
       color: #fff;
+
+      @include max600{
+        display: none;
+      }
       .stat {
         .value {
           font-size: 2rem;
@@ -85,5 +94,56 @@
           opacity: 0.8;
         }
       }
+    }
+
+    .team-grids {
+     display: none;
+
+     @include max600{
+      display: block;
+     
+      .team-card {
+        background: #f3f4f6;
+        border-radius: 12px;
+        overflow: hidden;
+       
+        .team-icon {
+          height: 300px;
+          background: linear-gradient(to bottom right, #2563eb, #1d4ed8);
+  
+          @include max400{
+            height: 250px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .team-content {
+          padding: 1.5rem;
+          h3 {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+          }
+          .certification, .experience {
+            color: #6b7280;
+          }
+          .skills {
+            margin-top: 0.5rem;
+            .skill {
+              display: inline-block;
+              padding: 0.25rem 0.75rem;
+              margin: 0.25rem;
+              background-color: #dbeafe;
+              color: #2563eb;
+              border-radius: 999px;
+            }
+          }
+        }
+      }
+     }
+
+      
     }
   }

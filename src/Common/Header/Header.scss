@@ -100,8 +100,17 @@
       display: none;
     }
   }
+
   @include max900 {
-       
+     .menu-button{
+      display: block;
+      cursor: pointer;
+      padding: 3px 10px;
+
+      svg{
+        font-size: 1.5rem;
+      }
+     }  
     .drawer {
       position: fixed;
       top: 65px;
