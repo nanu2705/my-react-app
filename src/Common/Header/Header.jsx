@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./Header.scss";
-import { IoIosArrowDown } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
