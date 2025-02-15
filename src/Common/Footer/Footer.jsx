@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.scss'; // Make sure to create the CSS file for this component
 
-const Footer = () => {
+const Footer = ({onNavigate}) => {
   return (
     <footer id="Footer" className="footer">
       <div className="container">
@@ -37,9 +37,9 @@ const Footer = () => {
             <h4 className="footer-header">Quick Links</h4>
             <ul>
               <li><a href="https://example.com/about">About Us</a></li>
-              <li><a href="https://example.com/services">Services</a></li>
+              <li><span onClick={onNavigate}>Services</span></li>
               <li><a href="https://example.com/case-studies">Case Studies</a></li>
-              <li><a href="https://example.com/contact">Contact</a></li>
+              <li><span  onClick={onNavigate}>Contact</span></li>
             </ul>
           </div>
 
@@ -47,10 +47,10 @@ const Footer = () => {
           <div className="services">
             <h4 className="footer-header">Our Services</h4>
             <ul>
-              <li><a href="https://example.com/services/network">Network Security</a></li>
-              <li><a href="https://example.com/services/cloud">Cloud Security</a></li>
-              <li><a href="https://example.com/services/penetration-testing">Penetration Testing</a></li>
-              <li><a href="https://example.com/services/managed-soc">Managed SOC</a></li>
+              <li>< span onClick={onNavigate}>Network Security</span></li>
+              <li><span onClick={onNavigate}>Cloud Security</span></li>
+              <li><span onClick={onNavigate}>Penetration Testing</span></li>
+              <li><span onClick={onNavigate}>Managed SOC</span></li>
             </ul>
           </div>
 
@@ -59,8 +59,18 @@ const Footer = () => {
             <h4 className="footer-header">Contact Us</h4>
             <ul>
               <li>Mumbai, Maharashtra, India</li>
-              <li>+1 (234) 567-890</li>
-              <li>info@prathmeshcyber.com</li>
+              <li>
+    <a href="tel:+1234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
+      +1 (234) 567-890
+    </a>
+  </li>
+
+  {/* Email with Mailto */}
+  <li>
+    <a href="mailto:info@prathmeshcyber.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+      info@prathmeshcyber.com
+    </a>
+  </li>
             </ul>
           </div>
         </div>

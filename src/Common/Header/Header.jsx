@@ -10,6 +10,7 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const navigate = useNavigate(); 
+
   return (
     <header className="header">
       <div className="container">
@@ -30,16 +31,10 @@ const Header = () => {
             onMouseEnter={() => setServicesMenuOpen(true)}
             onMouseLeave={() => setServicesMenuOpen(false)}
           >
-            <a href="/">Services <span><IoIosArrowDown /></span></a>
-            {servicesMenuOpen && (
-              <div className="dropdown-menu">
-                <a href="/">Network Infrastructure</a>
-                <a href="/">Security Architecture</a>
-                <a href="/">Cloud Solutions</a>
-              </div>
-            )}
+            <a href="/services">Services</a>
+           
           </div>
-          <a href="/">Contact Us</a>
+          <a href="/contact">Contact Us</a>
         </nav>
       </div>
 
@@ -48,18 +43,10 @@ const Header = () => {
         <a href="/" onClick={() => setDrawerOpen(false)}>Home</a>
         <a href="/" onClick={() => setDrawerOpen(false)}>About Us</a>
         <div className="drawer-item">
-          <button onClick={() => setServicesMenuOpen(!servicesMenuOpen)}>
-            Services <IoIosArrowDown />
-          </button>
-          {servicesMenuOpen && (
-            <div className="dropdown-menu flex-column">
-              <a href="/" onClick={() => setDrawerOpen(false)}>Network Infrastructure</a>
-              <a href="/" onClick={() => setDrawerOpen(false)}>Security Architecture</a>
-              <a href="/" onClick={() => setDrawerOpen(false)}>Cloud Solutions</a>
-            </div>
-          )}
+        <a href="/services">Services</a>
+         
         </div>
-        <a href="/" onClick={() => setDrawerOpen(false)}>Contact Us</a>
+        <a href="/contact" onClick={() => setDrawerOpen(false)}>Contact Us</a>
       </div>
     </header>
   );

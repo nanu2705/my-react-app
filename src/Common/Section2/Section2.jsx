@@ -1,8 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Network, Server, Users } from "lucide-react";
 import "./Section2.scss";
 
+const allServices = [
+  { title: "Managed Network & Security Services", 
+    description: "24/7 monitoring and management of your network and security infrastructure.", 
+    icon: <Network /> ,
+    details:"Our Managed Network and Security Services offer continuous, 24/7 monitoring, management, and support for your entire network and security devices. With a dedicated help desk and a streamlined ticketing system, we provide responsive support to ensure your network operates smoothly. From proactive threat detection to real-time incident response, we handle monitoring and management tasks, allowing your team to focus on business growth. Our services are designed to prevent downtime, enhance network performance, and protect against emerging threats, providing you with a reliable, outsourced security solution."
+  },
+  { title: "Server Management, Deployment, and Troubleshooting", 
+    description: "Expert server deployment, maintenance, and issue resolution.", 
+    icon: <Server /> ,
+    details:"Our Server Management, Deployment, and Troubleshooting services ensure your server infrastructure runs at peak performance. Our team of experts in server technology handles the deployment, configuration, and ongoing management of your servers, ensuring they are optimized for security and reliability. We offer 24/7 monitoring, regular updates, and security patching, along with expert troubleshooting to address any issues promptly. With our proactive approach, we minimize downtime, improve server efficiency, and ensure your systems are always secure and reliable."
+  },
+  { title: "IT Staffing (Offshore Staff)", 
+    description: "Hire skilled offshore IT professionals to enhance your workforce.", 
+    icon: <Users /> ,
+    details:"Expand your IT capabilities with our Offshore IT Staffing solutions. We provide highly skilled professionals to meet your technical needs without the overhead costs of full-time employees. From network administrators to cybersecurity experts, our staff is trained to seamlessly integrate with your team, delivering high-quality results and supporting your IT projects efficiently."
+  },
+  
+  
+];
+
 const Services = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+    const [selectedService, setSelectedService] = useState(null);
+  
+    const openModal = (service) => {
+      setSelectedService(service);
+      setModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setModalOpen(false);
+      setSelectedService(null);
+    };
+
   return (
     <section id="Services" className="services-section">
       <div className="container">
@@ -12,42 +46,29 @@ const Services = () => {
         </div>
 
         <div className="services-grid">
-          {/* Show only 3 services on the main page */}
-          <div className="service-card">
-            <div className="icon-wrapper">
-              <svg className="icon" viewBox="0 0 24 24">
-                <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-              </svg>
+          {allServices.map((service, index) => (
+            <div key={index} className="service-card" onClick={() => openModal(service)} >
+              <div className="icon-wrapper" >{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
             </div>
-            <h3>Network Infrastructure Consulting</h3>
-            <p>Professional advice on design, implementation, and optimization of your network infrastructure.</p>
-          </div>
-
-          <div className="service-card">
-            <div className="icon-wrapper">
-              <svg className="icon" viewBox="0 0 24 24">
-                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
-            </div>
-            <h3>Security Architecture & Consulting</h3>
-            <p>Robust, scalable security infrastructures tailored to your specific needs.</p>
-          </div>
-
-          <div className="service-card">
-            <div className="icon-wrapper">
-              <svg className="icon" viewBox="0 0 24 24">
-                <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-              </svg>
-            </div>
-            <h3>Cloud Solutions and Security</h3>
-            <p>Secure cloud environments optimized for performance and protection.</p>
-          </div>
+          ))}
         </div>
 
         {/* Button to navigate to all services page */}
         <div className="view-all">
           <Link to="/services" className="view-all-button">View All Services</Link>
         </div>
+
+        {modalOpen && selectedService && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal" onClick={(e) => e.stopPropagation()}>
+              <button className="close-button" onClick={closeModal}>X</button>
+              <h3>{selectedService.title}</h3>
+              <p>{selectedService.details}</p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

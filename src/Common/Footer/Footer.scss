@@ -51,6 +51,8 @@
   .footer-header {
     font-size: 1.5rem;
     font-weight: bold;
+     
+  
   }
   
   .footer-subtext {
@@ -80,6 +82,7 @@
   /* Quick Links, Services, Contact Info */
   .footer-header {
     margin-bottom: 1rem;
+
   }
   
   ul {
@@ -89,6 +92,12 @@
   
   ul li {
     margin-bottom: 0.5rem;
+    cursor: pointer;
+
+    &:hover{
+        color: rgba(245, 245, 245, 0.511);
+    }
+  
   }
   
   ul li a {
@@ -98,7 +107,7 @@
   }
   
   ul li a:hover {
-    color: white;
+    color: rgba(255, 255, 255, 0.129);
   }
   
   /* Bottom Bar */
