@@ -5,7 +5,6 @@ import { IoReorderThreeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const navigate = useNavigate(); 
@@ -25,14 +24,8 @@ const Header = () => {
         <nav className="desktop-nav">
           <a href="/">Home</a>
           <a href="/">About Us</a>
-          <div
-            className="nav-item"
-            onMouseEnter={() => setServicesMenuOpen(true)}
-            onMouseLeave={() => setServicesMenuOpen(false)}
-          >
-            <a href="/services">Services</a>
-           
-          </div>
+          <a href="/services">Services</a>
+          <a href="/career">Career</a>
           <a href="/contact">Contact Us</a>
         </nav>
       </div>
@@ -41,10 +34,8 @@ const Header = () => {
       <div className={`drawer ${drawerOpen ? "open" : ""}`}>
         <a href="/" onClick={() => setDrawerOpen(false)}>Home</a>
         <a href="/" onClick={() => setDrawerOpen(false)}>About Us</a>
-        <div className="drawer-item">
-        <a href="/services">Services</a>
-         
-        </div>
+        <a href="/services" onClick={() => setDrawerOpen(false)}>Services</a>
+        <a href="/career" onClick={() => setDrawerOpen(false)}>Career</a>
         <a href="/contact" onClick={() => setDrawerOpen(false)}>Contact Us</a>
       </div>
     </header>

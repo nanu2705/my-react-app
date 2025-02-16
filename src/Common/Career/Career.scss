@@ -1,0 +1,103 @@
+
+
+.career-main{
+     max-width: 1200px;
+     margin: 69px auto;
+    
+     .career-heading{
+         padding: 20px 0;
+        h1{
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        span{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        button{
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+     }
+
+     .career-details{
+
+        padding: 20px 0;
+        .career-opportunities{
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 8px;
+            row-gap: 10px;
+            // border: 1px solid grey;
+            // border-radius: 10px;
+            padding: 10px;
+
+
+         .career-opportunities-card{
+            border: 1px solid black;
+            border-radius: 10px;
+            gap: 5px;
+
+            h2{
+                color: rgba(0, 0, 255, 0.601);
+            }
+            svg{
+                color: rgba(0, 128, 0, 0.748);
+            }
+            p{
+                padding: 0 8px;
+            }
+         }   
+        }
+       
+     }
+
+     .career-positions{
+        padding: 20px 0;
+        .career-positions-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+       gap: 10px;
+       cursor: pointer;
+
+          .career-positions-card{
+           
+            &:hover{
+                color: blue;
+               }
+          p{
+            margin-top: -1px;
+            font-size: 15px;
+           }
+        .career-image{
+            img{
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+            }
+        }
+       
+           }
+          }
+     }
+
+     .career-last{
+
+        margin-top: 50px;
+      a{
+        text-decoration: none;
+        color: blue;
+        margin-left: 10px;
+      }
+     }
+}
