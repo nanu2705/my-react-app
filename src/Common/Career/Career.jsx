@@ -2,6 +2,20 @@ import React from 'react'
 import "./Career.scss"
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import img from "../../Assets/job.jpg"
+import { Link } from "react-router-dom";
+
+const jobRoles = [
+  { title: "Checkpoint Engineer", openings: 0 },
+  { title: "Palo Alto Engineer", openings: 7 },
+  { title: "Cisco Security Engineer", openings: 3 },
+  { title: "Cisco Data Center Engineer", openings: 1 },
+  { title: "Fortinet Engineer", openings: 7 },
+  { title: "Server Infrastructure Engineer", openings: 5 },
+  { title: "System Support Engineer", openings: 5 },
+  { title: "NOC Engineer", openings: 5 },
+  { title: "SOC Engineer", openings: 5 },
+];
+
 
 const Career = () => {
   return (
@@ -61,71 +75,25 @@ const Career = () => {
       
       </div>
 
-        <div className="career-positions">
-
-          <div className="career-positions-heading">
+      <div className="career-positions">
+        <div className="career-positions-heading">
           <h2>Want to Join Prathmesh?</h2>
-          <p>Check out our open from below and fill the application form by clicking on it.</p>
-          </div>
-           
-             <div className="career-positions-grid">
-             
-            <div className="career-positions-card">
-                <div className="career-image">
-                    <img src={img} alt="career" />
-                </div>
-                <span>Security Analyst</span>
-                <p>No Open Jobs</p>
-            </div>
-
-            <div className="career-positions-card">
-            <div className="career-image">
-                    <img src={img} alt="career" />
-                </div>
-                <span>Penetration Tester</span>
-                <p>7 Open Jobs</p>
-            </div>
-
-            <div className="career-positions-card">
-            <div className="career-image">
-                    <img src={img} alt="career" />
-                </div>
-                <span>Security Engineer</span>
-                <p>3 Open Jobs</p>
-            </div>
-
-            <div className="career-positions-card">
-            <div className="career-image">
-                    <img src={img} alt="career" />
-                </div>
-                <span>Incident Responder</span>
-                <p>1 Open Jobs</p>
-            </div>
-
-            <div className="career-positions-card">
-            <div className="career-image">
-                    <img src={img} alt="career" />
-                </div>
-                <span>Incident Responder</span>
-                <p>7 Open Jobs</p>
-            </div>
-
-            <div className="career-positions-card">
-            <div className="career-image">
-                    <img src={img} alt="career" />
-                </div>
-                <span>Incident Responder</span>
-                <p>5 Open Jobs</p>
-            </div>
-
-
-
-            </div>
-
-            <div className="career-positions-more">
-                <a href="/career">View More</a>
-            </div>
+          <p>Check out our current job openings and verify your eligibility. To apply, send your resume to the provided email addresses.</p>
         </div>
+
+        <div className="career-positions-grid">
+          {jobRoles.map((role, index) => (
+            <Link to={`/career/${role.title.replace(/\s+/g, "-").toLowerCase()}`} key={index} className="career-positions-card">
+              <div className="career-image">
+                <img src={img} alt={role.title} />
+              </div>
+              <span>{role.title}</span>
+              <p>{role.openings > 0 ? `${role.openings} Open Jobs` : "No Open Jobs"}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
+
 
     <div className="career-last">
         Want to know more about the company? 

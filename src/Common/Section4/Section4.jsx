@@ -5,7 +5,7 @@ const features = [
   {
     title: "Certified Expertise",
     description:
-      "Our team holds top-tier certifications including CCIE, CEH, PCNSE, CCSE, Fortinet, OSCP, CISSP, and OSCE, bringing unmatched technical expertise to secure your business.",
+      "Our team holds top-tier certifications including CCIE, CEH, PCNSE, CCSE, Fortinet NSE 1 To 7, OSCP, CISSP, and OSCE, bringing unmatched technical expertise to secure your business.",
     icon: (
       <path
         strokeLinecap="round"
@@ -57,7 +57,7 @@ const features = [
   {
     title: "Comprehensive Services",
     description:
-      "From network security to penetration testing, we provide a full range of services covering every facet of cybersecurity.",
+      "From network security consulting and firewall management to cloud security and vulnerability assessment and penetration testing, we provide a full range of services to cover every facet of cybersecurity.",
     icon: (
       <path
         strokeLinecap="round"
@@ -88,7 +88,7 @@ const Section4 = () => {
     <section id="WhyChooseUs" className="why-choose-section">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="section-title">Why Choose Us?</h2>
+          <h2 className="section-title">Why We're the Right Choice?</h2>
           <p className="section-subtitle">
             Selecting the right cybersecurity provider is a crucial decision.
             Here's why Prathmesh Cyber Force stands out.

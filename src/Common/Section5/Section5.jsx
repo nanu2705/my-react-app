@@ -3,22 +3,23 @@ import "./Section5.scss"
 
 const certifications = [
   { name: "CCIE", description: "Cisco Certified Internetwork Expert" },
-  { name: "CEH", description: "Certified Ethical Hacker" },
-  { name: "CISSP", description: "Certified Information Systems Security Professional" },
+  { name: "FCP _FCSS", description: "Fortinet Certified Expert" },
+  { name: "CCSE", description: "Checkpoint Certified Security Expert" },
   { name: "OSCP", description: "Offensive Security Certified Professional" },
   { name: "PCNSE", description: "Palo Alto Networks Certified Security Engineer" },
-  { name: "OSCE", description: "Offensive Security Certified Expert" },
+  { name: "Azure _AWS", description: "Cloud Certified Expert" },
 ];
 
 const skills = [
-  { name: "Network Security", level: 95 },
-  { name: "Penetration Testing", level: 90 },
-  { name: "Cloud Security", level: 88 },
-  { name: "Incident Response", level: 92 },
+  { name: "Network Security", level: 100 },
+  { name: "Penetration Testing", level: 100 },
+  { name: "Firewall Migration", level: 100 },
+  { name: "Vulnerability Assesment", level: 100 },
+  { name: "Managed SOC & NOC", level: 100 },
 ];
 
 const stats = [
-  { value: "15+", label: "Years of Experience" },
+  { value: "20+", label: "Years of Experience" },
   { value: "500+", label: "Projects Completed" },
 ];
 

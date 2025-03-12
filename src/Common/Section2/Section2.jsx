@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Network, Server, Users } from "lucide-react";
 import "./Section2.scss";
+import { Link } from "react-router-dom";
+import { Network, Server,Shield } from "lucide-react";
+
 
 const allServices = [
   { title: "Managed Network & Security Services", 
@@ -14,11 +15,13 @@ const allServices = [
     icon: <Server /> ,
     details:"Our Server Management, Deployment, and Troubleshooting services ensure your server infrastructure runs at peak performance. Our team of experts in server technology handles the deployment, configuration, and ongoing management of your servers, ensuring they are optimized for security and reliability. We offer 24/7 monitoring, regular updates, and security patching, along with expert troubleshooting to address any issues promptly. With our proactive approach, we minimize downtime, improve server efficiency, and ensure your systems are always secure and reliable."
   },
-  { title: "IT Staffing (Offshore Staff)", 
-    description: "Hire skilled offshore IT professionals to enhance your workforce.", 
-    icon: <Users /> ,
-    details:"Expand your IT capabilities with our Offshore IT Staffing solutions. We provide highly skilled professionals to meet your technical needs without the overhead costs of full-time employees. From network administrators to cybersecurity experts, our staff is trained to seamlessly integrate with your team, delivering high-quality results and supporting your IT projects efficiently."
+  { title: "Firewall & Intrusion Prevention Systems", 
+    description: "  Advanced threat protection with robust firewall and IPS solutions.", 
+    icon: <Shield /> ,
+    details:"Protect your network with our Firewall & Intrusion Prevention Systems (IPS) services. We deploy and manage advanced firewalls and IPS solutions to block unauthorized access and mitigate malicious traffic. With real-time threat detection and automated responses, we ensure that your network remains secure from internal and external threats."
   },
+  
+  
   
   
 ];

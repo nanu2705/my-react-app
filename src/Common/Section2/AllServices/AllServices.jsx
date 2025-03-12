@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Shield, Lock, MonitorCheck, Network, Server, Users, RefreshCcw, Search, EyeOff, ShieldAlert, Activity, Laptop, UserCheck, Repeat, UserCog, GlobeLock } from "lucide-react";
 import "../Section2.scss";
+import { Link } from "react-router-dom";
+import {  Lock, MonitorCheck, Network, Server, Users, RefreshCcw, Search, EyeOff, ShieldAlert, Activity, Laptop, UserCheck, Repeat, UserCog, GlobeLock } from "lucide-react";
+
 
 const allServices = [
-  { title: "Firewall & Intrusion Prevention Systems", 
-    description: "Advanced threat protection with robust firewall and IPS solutions.", 
-    icon: <Shield /> ,
-    details:"Protect your network with our Firewall & Intrusion Prevention Systems (IPS) services. We deploy and manage advanced firewalls and IPS solutions to block unauthorized access and mitigate malicious traffic. With real-time threat detection and automated responses, we ensure that your network remains secure from internal and external threats."
+  { title: "IT Staffing (Offshore Staff)", 
+    description: "Hire skilled offshore IT professionals to enhance your workforce.", 
+    icon: <Users /> ,
+    details:"Expand your IT capabilities with our Offshore IT Staffing solutions. We provide highly skilled professionals to meet your technical needs without the overhead costs of full-time employees. From network administrators to cybersecurity experts, our staff is trained to seamlessly integrate with your team, delivering high-quality results and supporting your IT projects efficiently."
   },
   { title: "Zero Trust Access / Remote Access Security", 
     description: "Secure remote access with zero-trust frameworks and identity verification.", 
@@ -104,7 +105,7 @@ const AllServices = () => {
     <section id="AllServices" className="services-section">
       <div className="container">
         <div className="section-header">
-          <h2>All Our Services</h2>
+        <h2 style={{ marginTop: "69px" }}>All Our Services</h2>
           <p>Explore our full range of security and IT solutions.</p>
         </div>
 

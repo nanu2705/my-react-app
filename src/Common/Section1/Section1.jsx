@@ -18,31 +18,32 @@ const Section1 = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1>
-              Your Trusted Partner in <span>Cyber Security</span> Excellence
+            Elevating <span> Cybersecurity</span>  to New Heights.
+             
             </h1>
             <p>
-              Protecting your digital assets with state-of-the-art network security solutions. We shield your company from evolving online threats while ensuring business continuity.
+            End-to-end  <strong>managed network & security solutions </strong> that protect your digital landscape. From <strong>24/7 SOC & NOC monitoring, firewall management,</strong> and <strong>network migration, </strong>to <strong> cloud security </strong>and <strong>endpoint protection</strong>, we offer a seamless, proactive approach to safeguarding your business against evolving threats. Our services ensure continuous uptime, risk mitigation, and the highest level of protection—so you can focus on what matters most.
             </p>
             <div className="cta-buttons">
-              <a href="/" className="primary-btn">
+              <a href="/contact" className="primary-btn">
                 Get Protected Now
               </a>
-              <a href="/" className="secondary-btn">
+              <a href="/services" className="secondary-btn">
                 Explore Services
               </a>
             </div>
             <div className="trust-indicators">
               <div>
                 <div className="value">
-                  <CountUp start={0} end={15} duration={3} suffix="+" /> {/* Countup for years of experience */}
+                  <CountUp start={0} end={20} duration={3} suffix="+" /> {/* Countup for years of experience */}
                 </div>
                 <div className="label">Years Experience</div>
               </div>
               <div>
                 <div className="value">
-                  24
+                  24/7
                 </div>
-                <div className="label">/7 Support</div>
+                <div className="label"> Support</div>
               </div>
               <div>
                 <div className="value">
@@ -65,9 +66,7 @@ const Section1 = () => {
         </div>
       </div>
       
-      {/* <div className="scroll-indicator">
-        <IoIosArrowDown className="scroll-icon" />
-      </div> */}
+    
     </section>
   );
 }

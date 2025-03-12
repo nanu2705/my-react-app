@@ -10,6 +10,11 @@ import Loader from './Common/Loader/Loader';
 import Nopage from './Common/Nopage/Nopage';
 import ScrollToTop from './Common/ScrollToTop/ScrollTop';
 import Career from './Common/Career/Career';
+import Privacy from './Common/Privacy/Privacy';
+import Terms from './Common/Terms/Terms';
+import MoveToTop from './Common/MoveToTop/MoveToTop';
+import Stories from './Common/Section6/Stories';
+import RoleDetail from './Common/Career/RoleDetail';
 
 
 function App() {
@@ -17,7 +22,7 @@ function App() {
     <div className="App">
       
        <BrowserRouter>
-       
+       <MoveToTop/>
        <Header/>
        <Loader/>
        <Routes>
@@ -26,7 +31,12 @@ function App() {
          <Route path="/services" element={<AllServices/>} />
          <Route path="/contact" element={<Contact/>} />
          <Route path="/career" element={<Career/>} />
+         <Route path="/career/:role" element={<RoleDetail/>} />
          <Route path="*" element={<Nopage/>} />
+         <Route path="/privacy" element={<Privacy/>} />
+         <Route path="/terms" element={<Terms/>} />
+         <Route path="/stories" element={<Stories/>} />
+
 
        </Routes>
 

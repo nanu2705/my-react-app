@@ -17,7 +17,7 @@
     padding: 4rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    gap: 2rem;
+    gap: 1.5rem;
 
     @include max900{
         grid-template-columns: 1fr 1fr 1fr;
@@ -51,12 +51,23 @@
   .footer-header {
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
      
+     img{
+      width: 50px;
+      height:50px;
+     }
   
   }
   
   .footer-subtext {
+    margin-top: -20px;
+   
     color: #d1d5db; /* text-gray-300 */
+    text-align: start;
   }
   
   .social-icons {
@@ -68,6 +79,7 @@
     display: inline-block;
     color: white;
     transition: color 0.3s;
+    font-size: 25px;
   }
   
   .social-icon:hover {
@@ -88,6 +100,7 @@
   ul {
     list-style-type: none;
     padding: 0;
+    
   }
   
   ul li {

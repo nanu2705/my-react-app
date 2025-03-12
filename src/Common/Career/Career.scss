@@ -71,8 +71,11 @@
        cursor: pointer;
 
           .career-positions-card{
-           
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
             &:hover{
+                transform: scale(1.05);
                 color: blue;
                }
           p{

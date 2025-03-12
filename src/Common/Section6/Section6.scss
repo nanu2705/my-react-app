@@ -1,85 +1,97 @@
- @import "../Mixin.scss";
+@import "../Mixin.scss";
 
 .section-case-studies {
-    padding: 3rem 2rem;
-    background-color: #f9fafb;
-    text-align: center;
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #f9fafb;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1e3a8a;
+      margin-bottom: 1rem;
     }
-    
-    .section-header {
-      .section-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #1e3a8a;
-        margin-bottom: 1rem;
-      }
-  
-      .section-description {
-        font-size: 1.25rem;
-        color: #4b5563;
-        margin-bottom: 3rem;
-      }
+
+    .section-description {
+      font-size: 1.25rem;
+      color: #4b5563;
+      margin-bottom: 3rem;
     }
-    
+
     .case-studies-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       margin-bottom: 4rem;
-  
-      @include max525{
+
+      @include max900{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include max600{
         grid-template-columns: repeat(1, 1fr);
       }
+
       .case-study-card {
         background: white;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.3s;
-  
+        position: relative;
+        // min-height: 250px;
+
         &:hover {
           box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
-  
+
         .case-study-icon {
           font-size: 4rem;
-          background: linear-gradient(to right, #2563eb, #1d4ed8);
+          // background: linear-gradient(to right, #2563eb, #d8651d);
           color: white;
-          padding: 2rem;
+          padding: 2rem 2rem 0rem 2rem;
+          height: 200px;
+
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit:fill;
+            border-radius: 20px;
+          }
         }
-  
+
         .case-study-content {
           padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 20px;
+
           .case-category {
             font-size: 0.875rem;
             color: #2563eb;
             font-weight: 600;
-            margin-bottom: 0.5rem;
           }
           .case-title {
             font-size: 1.25rem;
             font-weight: bold;
-            margin-bottom: 0.75rem;
           }
-          .case-description {
-            color: #6b7280;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-          }
+
           .case-footer {
             display: flex;
             justify-content: space-between;
             font-size: 0.875rem;
             color: #6b7280;
+
             .case-link {
               color: #2563eb;
               cursor: pointer;
               font-weight: 500;
-              transition: color 0.3s;
+              border: none;
+              background: none;
               &:hover {
                 color: #1d4ed8;
                 text-decoration: underline;
@@ -87,47 +99,72 @@
             }
           }
         }
-      }
-    }
-  
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
-      
-     @include max525{
-        grid-template-columns: repeat(2, 1fr);
-      }
 
-      .stat-item {
-        text-align: center;
-        .stat-value {
-          font-size: 2rem;
-          font-weight: bold;
-          color: #2563eb;
-          margin-bottom: 0.5rem;
+        .modal-slide {
+          position: absolute;
+          top: 0;
+          right: 100%; /* Initially hidden */
+          width: 100%;
+          height: 100%;
+          background: #ffffff;
+          box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1); 
+          transition: right 0.5s ease-in-out;
+          border-left: 3px solid #2563eb;
+          display: flex;
+          flex-direction: column;
+          z-index: 10;
+          overflow: auto;
+          
+          .close-modal {
+            display: flex;
+            justify-content: flex-end;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #4b5563;
+            background-color: transparent;
+            border: none;
+          }
+          
+
+          span {
+           padding-top: 20px;
+            color: #2563eb;
+          }
+
+          p {
+           padding-left: 20px;
+            color: #4b5563;
+            text-align: start;
+          }
         }
-        .stat-label {
-          font-size: 1rem;
-          color: #6b7280;
+
+        .modal-slide.active {
+          right: 0; /* Slide in */
+       
         }
       }
     }
-    
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      border: 2px solid #2563eb;
-      color: #2563eb;
-      font-weight: bold;
-      border-radius: 999px;
-      transition: all 0.3s;
-      text-decoration: none;
-      &:hover {
-        background-color: #2563eb;
-        color: white;
-      }
+
+    .case-studies-button{
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        border: 2px solid #2563eb;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      
+        button{
+          
+          font-weight: bold;
+          font-size: 13px;
+          border: none;
+          background-color: transparent;
+          color: #2563eb;
+          cursor: pointer;
+        }
     }
   }
-  
+}

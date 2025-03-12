@@ -3,6 +3,7 @@ import "./Header.scss";
 import { IoMdClose } from "react-icons/io";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import logo from "../../Assets/rlogo.png"
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -13,7 +14,10 @@ const Header = () => {
     <header className="header">
       <div className="container">
         {/* Logo */}
-        <div className="logo" onClick={() => navigate("/")}>Prathmesh Cyber Force</div>
+        <div className="logo" onClick={() => navigate("/")}>
+          <img src={logo} alt="" />
+          Prathmesh Cyber Force
+          </div>
 
         {/* Menu Button for Mobile */}
         <button className="menu-button" onClick={() => setDrawerOpen(!drawerOpen)}>
