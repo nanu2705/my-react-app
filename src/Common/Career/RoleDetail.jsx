@@ -97,7 +97,11 @@ const RoleDetail = () => {
       <h2 className="role-section-title">To Apply</h2>
       <p className="role-apply-info">{roleData.applyInfo}</p>
 
-      <button className="role-apply-btn">Apply Now</button>
+      <button className="role-apply-btn">
+      <a href="mailto:career@prathmeshcyberforce.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+        Apply Now
+        </a>
+        </button>
     </div>
   );
 };
