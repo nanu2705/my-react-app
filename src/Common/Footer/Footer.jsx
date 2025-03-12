@@ -5,7 +5,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaFacebookSquare } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import logo from "../../Assets/rlogo.png";
+import logo from "../../Assets/whitelogo.png";
 
 const Footer = () => {
 
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-main">
           {/* Company Info */}
           <div className="company-info">
-            <div className="footer-header">
+            <div className="footer-headers">
               <img src={logo} alt="" />
               <h3>Prathmesh Cyber Force</h3>
               </div>

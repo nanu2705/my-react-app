@@ -1,6 +1,6 @@
 import React from 'react';
 import './Nopage.scss';
-import img from '../../Assets/logo.jpeg';
+// import img from '../../Assets/logo.png';
 import { Link } from 'react-router-dom';
 
 const Nopage = () => {

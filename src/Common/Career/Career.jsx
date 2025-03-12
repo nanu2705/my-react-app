@@ -5,15 +5,15 @@ import img from "../../Assets/job.jpg"
 import { Link } from "react-router-dom";
 
 const jobRoles = [
-  { title: "Checkpoint Engineer", openings: 0 },
-  { title: "Palo Alto Engineer", openings: 7 },
-  { title: "Cisco Security Engineer", openings: 3 },
-  { title: "Cisco Data Center Engineer", openings: 1 },
-  { title: "Fortinet Engineer", openings: 7 },
-  { title: "Server Infrastructure Engineer", openings: 5 },
-  { title: "System Support Engineer", openings: 5 },
-  { title: "NOC Engineer", openings: 5 },
-  { title: "SOC Engineer", openings: 5 },
+  { title: "Checkpoint Engineer" },
+  { title: "Palo Alto Engineer" },
+  { title: "Cisco Security Engineer" },
+  { title: "Cisco Data Center Engineer" },
+  { title: "Fortinet Engineer" },
+  { title: "Server Infrastructure Engineer" },
+  { title: "System Support Engineer" },
+  { title: "NOC Engineer" },
+  { title: "SOC Engineer" },
 ];
 
 
@@ -88,7 +88,7 @@ const Career = () => {
                 <img src={img} alt={role.title} />
               </div>
               <span>{role.title}</span>
-              <p>{role.openings > 0 ? `${role.openings} Open Jobs` : "No Open Jobs"}</p>
+        
             </Link>
           ))}
         </div>

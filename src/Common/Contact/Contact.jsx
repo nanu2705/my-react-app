@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.scss';
-import img from "../../Assets/contact.png";
+import img from "../../Assets/flogo.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -20,39 +20,48 @@ const Contact = () => {
       
 
       <div className="contact-image">
+
+        <h3>Get In Touch </h3>
+
+        <span>Protect your business from cyber threats with Cyber Force. Contact us today for a free consultation and discover how we can secure your digital assets with cutting-edge cybersecurity solutions.</span>
         <img src={img} alt="contact" className="rotate-image" />
       </div>
     
       <form onSubmit={handleSubmit} className="contact-form">
 
-      <h2 className="contact-title">Contact Us</h2>
+         <div className="form-data">
+        <span>Full Name</span>   
         <input
           type="text"
           name="name"
-          placeholder="Your Name"
           value={formData.name}
           onChange={handleChange}
           required
           className="contact-input"
         />
+        </div>
+        <div className="form-data">
+        <span>Email</span>
         <input
           type="email"
           name="email"
-          placeholder="Your Email"
           value={formData.email}
           onChange={handleChange}
           required
           className="contact-input"
         />
+        </div>
+        <div className="form-data">
+        <span>Message</span>
         <textarea
           name="message"
-          placeholder="Your Message"
           value={formData.message}
           onChange={handleChange}
           required
           className="contact-textarea"
         />
-        <button type="submit" className="contact-button">Send</button>
+        </div>
+        <button type="submit" className="contact-button">Send Message</button>
       </form>
     </div>
   );  

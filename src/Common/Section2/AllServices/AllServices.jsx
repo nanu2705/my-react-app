@@ -1,14 +1,34 @@
 import React, { useState } from "react";
 import "../Section2.scss";
 import { Link } from "react-router-dom";
-import {  Lock, MonitorCheck, Network, Server, Users, RefreshCcw, Search, EyeOff, ShieldAlert, Activity, Laptop, UserCheck, Repeat, UserCog, GlobeLock } from "lucide-react";
+import {  Lock, MonitorCheck, Network, Server, Users, RefreshCcw, Search, EyeOff, ShieldAlert, Activity, Laptop, UserCheck, Repeat, UserCog, GlobeLock, Shield } from "lucide-react";
 
 
 const allServices = [
+  { title: "Network Infrastructure Consulting", 
+    description: " Optimize and secure your network with expert design, implementation, and NaaS solutions like SD-WAN, MPLS, and BGP.", 
+    icon: <Users /> ,
+    details:"For network infrastructures that are customized to your company's requirements, our Network Consulting service provides professional advice on design, implementation, and optimization. We evaluate your existing network, find any configuration flaws or possible vulnerabilities, and suggest fixes to improve security, scalability, and performance. We offer strategic guidance to create a robust, future-proof network, regardless of the size of your company. We specialize in Network as a Service (NaaS) with all network technologies like SDWAN, MPLS, BGP, VRF High Availability etc."
+  },
+  { title: "Security Architecture & Consulting", 
+    description: "Strengthen cybersecurity with firewall reviews, intrusion prevention, and advanced security solutions like IPS, AV, and Network Access Control.", 
+    icon: <Users /> ,
+    details:"With Security Architecture & Consulting service, we focus on designing and implementing robust, scalable security infrastructures tailored to your needs. We provide expert firewall configuration reviews, optimize intrusion detection/prevention systems, and recommendation on integrate advanced security products to safeguard your network. We offer Security as a Service (SaaS), optimize next-gen firewalls, IPS/AV/Webfilter, and Network Access Control to safeguard your network. Our team ensures secure network protocols, access control, and seamless product integration. We help you build a proactive, resilient security framework that aligns with industry standards and mitigates risks."
+  },
+  { title: "Cloud Solutions and Security", 
+    description: " Secure your cloud with safe migration, encryption, and access controls while optimizing performance and scalability.", 
+    icon: <Users /> ,
+    details:"Our Cloud Solutions and Security services ensure your cloud environments are secure and optimized for performance. We offer secure migration to cloud platforms, manage cloud infrastructures, and implement strong access controls and encryption techniques to protect your data. With our support, you can confidently leverage cloud technologies while ensuring the highest levels of security."
+  },
   { title: "IT Staffing (Offshore Staff)", 
     description: "Hire skilled offshore IT professionals to enhance your workforce.", 
     icon: <Users /> ,
     details:"Expand your IT capabilities with our Offshore IT Staffing solutions. We provide highly skilled professionals to meet your technical needs without the overhead costs of full-time employees. From network administrators to cybersecurity experts, our staff is trained to seamlessly integrate with your team, delivering high-quality results and supporting your IT projects efficiently."
+  },
+  { title: "Firewall & Intrusion Prevention Systems", 
+    description: "  Advanced threat protection with robust firewall and IPS solutions.", 
+    icon: <Shield /> ,
+    details:"Protect your network with our Firewall & Intrusion Prevention Systems (IPS) services. We deploy and manage advanced firewalls and IPS solutions to block unauthorized access and mitigate malicious traffic. With real-time threat detection and automated responses, we ensure that your network remains secure from internal and external threats."
   },
   { title: "Zero Trust Access / Remote Access Security", 
     description: "Secure remote access with zero-trust frameworks and identity verification.", 
@@ -29,11 +49,6 @@ const allServices = [
     description: "Expert server deployment, maintenance, and issue resolution.", 
     icon: <Server /> ,
     details:"Our Server Management, Deployment, and Troubleshooting services ensure your server infrastructure runs at peak performance. Our team of experts in server technology handles the deployment, configuration, and ongoing management of your servers, ensuring they are optimized for security and reliability. We offer 24/7 monitoring, regular updates, and security patching, along with expert troubleshooting to address any issues promptly. With our proactive approach, we minimize downtime, improve server efficiency, and ensure your systems are always secure and reliable."
-  },
-  { title: "IT Staffing (Offshore Staff)", 
-    description: "Hire skilled offshore IT professionals to enhance your workforce.", 
-    icon: <Users /> ,
-    details:"Expand your IT capabilities with our Offshore IT Staffing solutions. We provide highly skilled professionals to meet your technical needs without the overhead costs of full-time employees. From network administrators to cybersecurity experts, our staff is trained to seamlessly integrate with your team, delivering high-quality results and supporting your IT projects efficiently."
   },
   { title: "Network Migration", 
     description: "Seamless network migration with minimal downtime and enhanced security.", 
@@ -84,6 +99,16 @@ const allServices = [
     description: "End-to-end security solutions, from risk assessments to incident response, ensuring business resilience.", 
     icon: <GlobeLock />,
     details:"Protect your business from the ever-evolving world of cyber threats with our comprehensive Cyber Security Services. Our offerings include incident management, real-time threat response, remediation, data encryption, and advanced threat intelligence. We also provide risk assessments, vulnerability scanning, and continuous monitoring to proactively detect and address potential threats. From detecting and mitigating breaches to ensuring business continuity and compliance, we tailor our services to safeguard your organization from both internal and external cyber risks, giving you the peace of mind that your systems are always secure."
+  },
+  { title: "Firewall Migration Services", 
+    description: "Seamlessly transition to next-gen firewalls with expert planning, configuration, and optimization, ensuring enhanced security and minimal downtime.", 
+    icon: <GlobeLock />,
+    details:"Our Firewall Migration Service ensures a seamless transition to next-gen firewalls with minimal downtime and maximum security. Our certified experts handle every aspect of the migration, from planning and configuration to testing and optimization. Whether you’re moving to Fortinet, Cisco, Palo Alto, Checkpoint, or other leading firewall solutions, we ensure your new system is fully integrated and optimized for your network.We work closely with your team to ensure a smooth migration that preserves your security policies and settings. Our professionals manage the entire process, from initial assessment and vendor-specific configurations to post-migration monitoring and fine-tuning. With our Firewall Migration Service, you gain enhanced network security, improved performance, and a robust firewall solution that keeps your business protected against evolving threats."
+  },
+  { title: "Security Hardening Services", 
+    description: "Strengthen your network and systems by eliminating vulnerabilities, securing endpoints, and optimizing security controls for robust protection against evolving threats.", 
+    icon: <GlobeLock />,
+    details:"Our Security Hardening Service strengthens your network, systems, and applications by applying industry-best practices to identify and eliminate vulnerabilities. Our certified experts configure firewalls, secure endpoints, harden servers, and optimize cloud environments to minimize attack surfaces and protect against evolving threats. We implement strict access controls, remove unnecessary services, and ensure ongoing monitoring and updates to maintain a robust security posture. With our service, you can trust that your infrastructure is fortified, reducing risk and ensuring business continuity in a constantly evolving threat landscape."
   }
 ];
 

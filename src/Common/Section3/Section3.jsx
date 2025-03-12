@@ -26,7 +26,7 @@ const Section3 = () => {
                 )
               }, {
                 title: "Expert-Led Cybersecurity Services",
-                description: "Founded by certified professionals with over 15 years of experience and managed by a team holding top-tier certifications including CCIE, CEH, PCNSE, CCSE, and more.",
+                description: "Founded by certified professionals with over 20 years of experience and managed by a team holding top-tier certifications including CCIE, CEH, PCNSE, CCSE, and more.",
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 )

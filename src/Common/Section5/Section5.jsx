@@ -3,11 +3,11 @@ import "./Section5.scss"
 
 const certifications = [
   { name: "CCIE", description: "Cisco Certified Internetwork Expert" },
-  { name: "FCP _FCSS", description: "Fortinet Certified Expert" },
+  { name: "FCP & FCSS", description: "Fortinet Certified Expert" },
   { name: "CCSE", description: "Checkpoint Certified Security Expert" },
   { name: "OSCP", description: "Offensive Security Certified Professional" },
   { name: "PCNSE", description: "Palo Alto Networks Certified Security Engineer" },
-  { name: "Azure _AWS", description: "Cloud Certified Expert" },
+  { name: "Azure & AWS", description: "Cloud Certified Expert" },
 ];
 
 const skills = [

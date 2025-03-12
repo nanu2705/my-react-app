@@ -48,17 +48,20 @@
     margin-bottom: 2rem;
   }
   
-  .footer-header {
-    font-size: 1.5rem;
-    font-weight: bold;
+  .footer-headers {
+   
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: start;
+    margin: 20px 0px;
+      
+    h3{
+      font-size: 20px;
      
+    }
      img{
-      width: 50px;
-      height:50px;
+      width: 45px;
+      height:35px;
+     
      }
   
   }
@@ -94,7 +97,7 @@
   /* Quick Links, Services, Contact Info */
   .footer-header {
     margin-bottom: 1rem;
-
+    font-size: 1.25rem;
   }
   
   ul {
