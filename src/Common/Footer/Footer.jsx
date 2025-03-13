@@ -56,7 +56,7 @@ const Footer = () => {
             <ul>
               <li><span onClick={() => navigate("/contact")}>About Us</span></li>
               <li><span onClick={() => navigate("/services")}>Services</span></li>
-              <li><span onClick={() => navigate("/contact")}>Success Stories</span></li>
+              <li><span onClick={() => navigate("/stories")}>Success Stories</span></li>
               <li><span onClick={() => navigate("/career")} >Career</span></li>
             </ul>
           </div>
