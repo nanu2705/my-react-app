@@ -27,7 +27,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
           <a href="/">Home</a>
-          <a href="/">About Us</a>
+          <a href="/about">About Us</a>
           <a href="/services">Services</a>
           <a href="/career">Career</a>
           <a href="/contact">Contact Us</a>

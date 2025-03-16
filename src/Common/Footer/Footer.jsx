@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="quick-links">
             <h4 className="footer-header">Quick Links</h4>
             <ul>
-              <li><span onClick={() => navigate("/contact")}>About Us</span></li>
+              <li><span onClick={() => navigate("/about")}>About Us</span></li>
               <li><span onClick={() => navigate("/services")}>Services</span></li>
               <li><span onClick={() => navigate("/stories")}>Success Stories</span></li>
               <li><span onClick={() => navigate("/career")} >Career</span></li>

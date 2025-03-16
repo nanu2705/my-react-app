@@ -15,6 +15,7 @@ import Terms from './Common/Terms/Terms';
 import MoveToTop from './Common/MoveToTop/MoveToTop';
 import Stories from './Common/Section6/Stories';
 import RoleDetail from './Common/Career/RoleDetail';
+import About from './Common/About/About';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
          <Route path="/privacy" element={<Privacy/>} />
          <Route path="/terms" element={<Terms/>} />
          <Route path="/stories" element={<Stories/>} />
+         <Route path="/about" element={<About/>} />
 
 
        </Routes>
