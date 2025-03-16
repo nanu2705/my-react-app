@@ -6,7 +6,9 @@
     "@emailjs/browser": "^4.4.1",
     "@mui/material": "^6.4.4",
     "@mui/styled-engine-sc": "^6.4.3",
+    "axios": "^1.8.3",
     "cra-template": "1.2.0",
+    "formik": "^2.4.6",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
@@ -16,7 +18,8 @@
     "react-slick": "^0.30.3",
     "sass": "^1.83.4",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^6.1.15"
+    "styled-components": "^6.1.15",
+    "yup": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",

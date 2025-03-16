@@ -1,20 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.scss';
 import img from "../../Assets/flogo.png";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios'
+
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  
+  // Form validation schema using Yup
+  const validationSchema = Yup.object({
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().email('Invalid email format').required('Email is required'),
+    message: Yup.string().required('Message is required').min(10, 'minimum 10 character is required'),
+  });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  // Initial form values
+  const initialValues = {
+    name: '',
+    email: '',
+    message: '',
+  };
+
+ // Form submission handler
+ const onSubmit = async (values, { resetForm }) => {
+  try {
+
+    alert("Your message is sending, Please wait...")
+    document.querySelector('body').style.overflow = 'hidden'
+    const { data } = await axios.post('http://localhost:3034/contact', values)
     
-  };
+    if (data.success) {
+      alert(data.message)
+     
+      resetForm()
+    } else {
+     
+      alert(data.error)
+    }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    window.location.href = `mailto:nandanipatel057@gmail.com?subject=Contact from ${formData.name}&body=${formData.message}%0A%0AFrom: ${formData.email}`;
-  };
+  } catch (error) {
+    console.log(error.message)
+   
+    alert("Something went wrong can't contact")
+
+  } finally {
+    document.querySelector('body').style.overflow = 'auto'
+    // setLoading(false)
+  }
+
+};
 
   return (
     <div className="contact-container">
@@ -28,42 +63,37 @@ const Contact = () => {
         <img src={img} alt="contact" className="rotate-image" />
       </div>
     
-      <form onSubmit={handleSubmit} className="contact-form">
+      <div className="form-container">
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={onSubmit}
+          >
 
-         <div className="form-data">
-        <span>Full Name</span>   
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          className="contact-input"
-        />
+            <Form className="contact-form">
+              <div className="form-field">
+                <label htmlFor="name">Name</label>
+                <Field type="text" id="name" name="name" className="field" placeholder="Enter Your name" />
+                <ErrorMessage name="name" component="div" className="error" />
+              </div>
+
+              <div className="form-field">
+                <label htmlFor="email">Email</label>
+                <Field type="email" id="email" name="email" className="field" placeholder="abc@gmail.com" />
+                <ErrorMessage name="email" component="div" className="error" />
+              </div>
+
+              <div className="form-field">
+                <label htmlFor="message">Message</label>
+                <Field as="textarea" id="message" name="message" className="field" placeholder="Enter Message here..." />
+                <ErrorMessage name="message" component="div" className="error" />
+              </div>
+
+              <button type="submit" className="contact-button">Submit</button>
+            </Form>
+
+          </Formik>
         </div>
-        <div className="form-data">
-        <span>Email</span>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          className="contact-input"
-        />
-        </div>
-        <div className="form-data">
-        <span>Message</span>
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          className="contact-textarea"
-        />
-        </div>
-        <button type="submit" className="contact-button">Send Message</button>
-      </form>
     </div>
   );  
 };
