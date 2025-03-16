@@ -28,7 +28,7 @@ const Contact = () => {
 
     alert("Your message is sending, Please wait...")
     document.querySelector('body').style.overflow = 'hidden'
-    const { data } = await axios.post('http://localhost:3034/contact', values)
+    const { data } = await axios.post('https://my-react-app-three-omega.vercel.app/contact', values)
     
     if (data.success) {
       alert(data.message)
