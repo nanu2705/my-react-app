@@ -77,11 +77,7 @@ const Footer = () => {
             <h4 className="footer-header">Contact Us</h4>
             <ul>
               <li>A2, Meghdoot Estate, Mahaveer Nagar, Bamroli Road, Godhra, Panchmahal 389001 Gujarat, India</li>
-              <li>
-                <a href="tel:+1234567890" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  +1 (234) 567-890
-                </a>
-              </li>
+             
               <li>
                 <a href="mailto:contactus@prathmeshcyberforce.com" style={{ textDecoration: 'none', color: 'inherit' }}>
                   contactus@prathmeshcyberforce.com
