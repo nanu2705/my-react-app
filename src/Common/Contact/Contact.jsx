@@ -14,6 +14,7 @@ const Contact = () => {
     const { name, email, message } = formData;
     const mailtoLink = `mailto:contactus@prathmeshcyberforce.com?subject=Contact%20Request%20from%20${name}&body=Name:%20${name}%0AEmail:%20${email}%0AMessage:%20${message}`;
     window.open(mailtoLink, '_blank');
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (

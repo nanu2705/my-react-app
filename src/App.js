@@ -16,7 +16,7 @@ import MoveToTop from './Common/MoveToTop/MoveToTop';
 import Stories from './Common/Section6/Stories';
 import RoleDetail from './Common/Career/RoleDetail';
 import About from './Common/About/About';
-
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
        <MoveToTop/>
        <Header/>
        <Loader/>
+       <Analytics/>
        <Routes>
 
          <Route path="/" element={<Home />} />
