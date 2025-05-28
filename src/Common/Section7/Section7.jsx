@@ -8,25 +8,25 @@ const Section7 = () => {
       icon: <FaLock />,
       title: "Identify Your Security Needs",
       description:
-        "Assess current risks and define what digital assets need protection.",
+        "Begin with a comprehensive assessment of your network, cloud, and endpoint security requirements. Choose from our wide range of services, including Network Consulting, Security Consulting, and Vulnerability Management, to build a customized security plan.",
     },
     {
       icon: <FaTools />,
       title: "Implement Security Measures",
       description:
-        "Apply firewalls, antivirus, encryption, and access controls effectively.",
+        "Leverage our expert security services like Firewall Deployment, Migration, Zero Trust Access, Endpoint Security, and Penetration Testing to proactively fortify your systems. Prepare for a rigorous security evaluation with our Managed SOC services.",
     },
     {
       icon: <FaShieldAlt />,
       title: "Achieve Ongoing Security",
       description:
-        "Monitor, update and audit your cybersecurity strategy regularly.",
+        "Receive detailed analysis and actionable insights from our Managed NOC & SOC, Service Desk, and Desktop Management support. Benefit from Patch Management, Server Management, and Expert As a Service (EaaS) to ensure continuous monitoring and optimization of your security infrastructure.",
     },
     {
       icon: <FaCheckCircle />,
       title: "Maintain Compliance",
       description:
-        "Ensure your systems align with security policies and compliance standards.",
+        "Establish and enforce internal security policies and standards to ensure your organization remains compliant with its own operational and regulatory requirements. Through regular audits, policy reviews, and comprehensive compliance tracking, we help you stay ahead of potential risks and maintain a strong security posture.",
     }
   ];
 
@@ -41,6 +41,7 @@ const Section7 = () => {
           <h3>{steps[activeStep].title}</h3>
           <p>{steps[activeStep].description}</p>
         </div>
+
         <div className="hud-steps">
           {steps.map((_, idx) => (
             <button
@@ -52,6 +53,12 @@ const Section7 = () => {
             </button>
           ))}
         </div>
+
+       
+        <a href="/contact" className="get-secure-btn" >
+                Get Secure Now
+              </a>
+         
       </div>
     </div>
   );

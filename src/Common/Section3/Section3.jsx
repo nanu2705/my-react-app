@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Section3.scss"
-import img from "../../Assets/section3.png"
+import img from "../../Assets/section3.jpg"
 const Section3 = () => {
   return (
     <section id="About" className="about-section">

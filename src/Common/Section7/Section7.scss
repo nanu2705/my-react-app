@@ -2,7 +2,8 @@
 
 .hud-section {
   background: url("../../Assets/section7-bg1.png") no-repeat center center;
-  background-size: cover;
+  background-size:auto 100%;
+  background-color: #f0f8ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +16,13 @@
     min-height: 80vh;
    }
 
+     @include max768 {
+    padding: 20px;
+    min-height: 80vh;
+  }
+
   .hud-frame {
-    padding: 40px;
+    padding: 20px 40px;
     border-radius: 20px;
     max-width: 800px;
     width: 100%;
@@ -26,11 +32,27 @@
     flex-direction: column;
     align-items: center;
 
+    @include max992 {
+      padding: 30px;
+    }
+
+    @include max768 {
+      padding: 20px;
+    }
+
     h3{
       font-size: 2.5rem;
       margin-bottom: 20px;
       text-align: center;
       color: #007bff;
+
+      @include max768 {
+        font-size: 2rem;
+      }
+
+      @include max576 {
+        font-size: 1.6rem;
+      }
     }
     .hud-content {
       text-align: center;
@@ -40,18 +62,42 @@
         font-size: 50px;
         margin-bottom: 15px;
         color: #007bff;
+
+         @include max576 {
+          font-size: 36px;
+        }
       }
 
       h3 {
         font-size: 1.8rem;
         margin-bottom: 10px;
+
+         @include max768 {
+          font-size: 1.5rem;
+        }
+
+        @include max576 {
+          font-size: 1.3rem;
+        }
       }
 
       p {
         font-size: 1rem;
         color: black;
         line-height: 1.6;
+
+          @include max768 {
+          font-size: 0.95rem;
+          
+        }
+
+        @include max576 {
+          font-size: 0.9rem;
+        }
       }
+
+      
+
     }
 
     .hud-steps {
@@ -60,6 +106,10 @@
       margin-top: 40px;
       width: 100%;
 
+      @include max768{
+      margin-top: 15px;
+      }
+    
       .hud-step-btn {
         flex: 1;
         margin: 0 5px;
@@ -70,6 +120,15 @@
         border-radius: 10px;
         cursor: pointer;
         transition: 0.3s;
+
+          @include max768 {
+          flex: 1 1 45%;
+        }
+
+        @include max576 {
+          flex: 1 1 100%;
+          font-size: 0.85rem;
+        }
 
         &.active {
           background-color: #007bff;
@@ -83,5 +142,28 @@
         }
       }
     }
+
+    .get-secure-btn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #00d8ff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+    
+   @include max576 {
+        width: 100%;
+        padding: 12px;
+      }
+      
+  &:hover {
+    background-color: #00b6d6;
+    color: white;
+  }
+}
   }
 }

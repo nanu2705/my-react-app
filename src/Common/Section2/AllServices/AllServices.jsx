@@ -3,7 +3,6 @@ import "../Section2.scss";
 import { Link } from "react-router-dom";
 import {  Lock, MonitorCheck, Network, Server, Users, RefreshCcw, Search, EyeOff, ShieldAlert, Activity, Laptop, UserCheck, Repeat, UserCog, GlobeLock, Shield } from "lucide-react";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi2";
-import { GiReturnArrow } from "react-icons/gi";
 
 const allServices = [
   { title: "Managed Network & Security Services", 
@@ -110,6 +109,11 @@ const allServices = [
     description: "Strengthen your network and systems by eliminating vulnerabilities, securing endpoints, and optimizing security controls for robust protection against evolving threats.", 
     icon: <GlobeLock />,
     details:"Our Security Hardening Service strengthens your network, systems, and applications by applying industry-best practices to identify and eliminate vulnerabilities. Our certified experts configure firewalls, secure endpoints, harden servers, and optimize cloud environments to minimize attack surfaces and protect against evolving threats. We implement strict access controls, remove unnecessary services, and ensure ongoing monitoring and updates to maintain a robust security posture. With our service, you can trust that your infrastructure is fortified, reducing risk and ensuring business continuity in a constantly evolving threat landscape."
+  },
+  { title: "Professional Services", 
+    description: "Expert assistance to deploy, troubleshoot, and maintain your network and security devices with confidence and efficiency.", 
+    icon: <GlobeLock />,
+    details:"Our Professional Services are designed to support your organization throughout the entire device lifecycle—from initial deployment and configuration to troubleshooting and ongoing maintenance. Whether integrating new hardware into your environment or optimizing existing infrastructure, our experienced team ensures seamless operations and reliable performance. With tailored, hands-on support, we help you get the most out of your network and security investments while minimizing downtime and complexity. By partnering with us, you can focus on operations while we handle the technical complexities of managing your IT assets."
   }
 ];
 
@@ -148,7 +152,8 @@ const AllServices = () => {
 
         <div className="view-all">
           <Link to="/" className="view-all-button">
-          <GiReturnArrow />
+          {/* <GiReturnArrow /> */}
+          Return to Home
           </Link>
         </div>
 

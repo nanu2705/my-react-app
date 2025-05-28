@@ -44,7 +44,7 @@ const About = () => {
           </div>
           <div className="feature">
             <FaClock className="icon" />
-            <h4>Round-the-Clock Monitoring and Support</h4>
+            <h4>Round-the-Clock Monitoring</h4>
             <p>We provide 24/7 monitoring and dedicated support to ensure your network stays protected.</p>
           </div>
         </div>
