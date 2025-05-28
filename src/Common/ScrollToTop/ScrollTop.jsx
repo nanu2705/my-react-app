@@ -22,7 +22,7 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
       style={{
         position: 'fixed',
-        bottom: '30px',
+        bottom: '85px',
         right: '30px',
         display: 'none',
         padding: '9px 10px',
@@ -31,7 +31,8 @@ const ScrollToTop = () => {
         background: '#007bff',
         color: '#fff',
         border: 'none',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        animation: 'bounce 1.5s infinite',
       }}
     >
       <FaArrowUp />

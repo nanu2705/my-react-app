@@ -15,7 +15,7 @@ const Header = () => {
       <div className="container">
         {/* Logo */}
         <div className="logo" onClick={() => navigate("/")}>
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" />
           Prathmesh Cyber Force
           </div>
 

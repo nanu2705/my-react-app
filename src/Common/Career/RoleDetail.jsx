@@ -504,11 +504,10 @@ const RoleDetail = () => {
       <h2 className="role-section-title">To Apply</h2>
       <p className="role-apply-info">{roleData.applyInfo}</p>
 
-      <button className="role-apply-btn">
-      <a href="mailto:career@prathmeshcyberforce.com">
-        Apply Now
-        </a>
-        </button>
+     <a href="mailto:career@prathmeshcyberforce.com" className="role-apply-btn">
+  Apply Now
+</a>
+
     </div>
   );
 };

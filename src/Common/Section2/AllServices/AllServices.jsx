@@ -2,9 +2,30 @@ import React, { useState } from "react";
 import "../Section2.scss";
 import { Link } from "react-router-dom";
 import {  Lock, MonitorCheck, Network, Server, Users, RefreshCcw, Search, EyeOff, ShieldAlert, Activity, Laptop, UserCheck, Repeat, UserCog, GlobeLock, Shield } from "lucide-react";
-
+import { HiOutlineQuestionMarkCircle } from "react-icons/hi2";
+import { GiReturnArrow } from "react-icons/gi";
 
 const allServices = [
+  { title: "Managed Network & Security Services", 
+    description: "24/7 monitoring and management of your network and security infrastructure.", 
+    icon: <Network /> ,
+    details:"Our Managed Network and Security Services offer continuous, 24/7 monitoring, management, and support for your entire network and security devices. With a dedicated help desk and a streamlined ticketing system, we provide responsive support to ensure your network operates smoothly. From proactive threat detection to real-time incident response, we handle monitoring and management tasks, allowing your team to focus on business growth. Our services are designed to prevent downtime, enhance network performance, and protect against emerging threats, providing you with a reliable, outsourced security solution."
+  },
+  { title: "Server Management, Deployment, and Troubleshooting", 
+    description: "Expert server deployment, maintenance, and issue resolution.", 
+    icon: <Server /> ,
+    details:"Our Server Management, Deployment, and Troubleshooting services ensure your server infrastructure runs at peak performance. Our team of experts in server technology handles the deployment, configuration, and ongoing management of your servers, ensuring they are optimized for security and reliability. We offer 24/7 monitoring, regular updates, and security patching, along with expert troubleshooting to address any issues promptly. With our proactive approach, we minimize downtime, improve server efficiency, and ensure your systems are always secure and reliable."
+  },
+  { title: "Firewall Migration Services", 
+    description: "Seamlessly transition to next-gen firewalls with expert planning, configuration, and optimization, ensuring enhanced security and minimal downtime.", 
+    icon: <GlobeLock />,
+    details:"Our Firewall Migration Service ensures a seamless transition to next-gen firewalls with minimal downtime and maximum security. Our certified experts handle every aspect of the migration, from planning and configuration to testing and optimization. Whether you’re moving to Fortinet, Cisco, Palo Alto, Checkpoint, or other leading firewall solutions, we ensure your new system is fully integrated and optimized for your network.We work closely with your team to ensure a smooth migration that preserves your security policies and settings. Our professionals manage the entire process, from initial assessment and vendor-specific configurations to post-migration monitoring and fine-tuning. With our Firewall Migration Service, you gain enhanced network security, improved performance, and a robust firewall solution that keeps your business protected against evolving threats."
+  },
+  { title: "Vulnerability Management & Penetration Testing", 
+    description: "Identify security weaknesses and test system resilience against cyber threats.", 
+    icon: <Search /> ,
+    details:"Our Vulnerability Management & Penetration Testing services provide comprehensive solutions to identify and address potential security risks in your infrastructure. Through regular vulnerability assessments, we scan your systems to detect weaknesses and prioritize remediation efforts. In addition, our expert penetration testing simulates real-world cyberattacks to uncover exploitable flaws in your defenses. These services help you stay ahead of evolving threats, ensuring your network is secure, resilient, and fully protected against attacks."
+  },
   { title: "Network Infrastructure Consulting", 
     description: " Optimize and secure your network with expert design, implementation, and NaaS solutions like SD-WAN, MPLS, and BGP.", 
     icon: <Users /> ,
@@ -40,25 +61,10 @@ const allServices = [
     icon: <MonitorCheck /> ,
     details:"Our Endpoint Security services ensure that all your end-user devices are securely integrated into your network. We conduct thorough assessments of your devices, configure security policies, and implement advanced security controls to protect against malware, ransomware, and unauthorized access. Our expert team provides continuous monitoring and management to ensure every device — from laptops to mobile devices — remains secure, regardless of its location or usage."
   },
-  { title: "Managed Network & Security Services", 
-    description: "24/7 monitoring and management of your network and security infrastructure.", 
-    icon: <Network /> ,
-    details:"Our Managed Network and Security Services offer continuous, 24/7 monitoring, management, and support for your entire network and security devices. With a dedicated help desk and a streamlined ticketing system, we provide responsive support to ensure your network operates smoothly. From proactive threat detection to real-time incident response, we handle monitoring and management tasks, allowing your team to focus on business growth. Our services are designed to prevent downtime, enhance network performance, and protect against emerging threats, providing you with a reliable, outsourced security solution."
-  },
-  { title: "Server Management, Deployment, and Troubleshooting", 
-    description: "Expert server deployment, maintenance, and issue resolution.", 
-    icon: <Server /> ,
-    details:"Our Server Management, Deployment, and Troubleshooting services ensure your server infrastructure runs at peak performance. Our team of experts in server technology handles the deployment, configuration, and ongoing management of your servers, ensuring they are optimized for security and reliability. We offer 24/7 monitoring, regular updates, and security patching, along with expert troubleshooting to address any issues promptly. With our proactive approach, we minimize downtime, improve server efficiency, and ensure your systems are always secure and reliable."
-  },
   { title: "Network Migration", 
     description: "Seamless network migration with minimal downtime and enhanced security.", 
     icon: <RefreshCcw /> ,
     details:"Easily transition your existing network to a new system with our Network Migration services. Whether you’re upgrading hardware or migrating to a new platform, we provide a smooth, risk-free process to ensure minimal disruption to your operations. Our team handles all aspects of the migration, ensuring that your network remains secure and fully functional during the transition."
-  },
-  { title: "Vulnerability Management & Penetration Testing", 
-    description: "Identify security weaknesses and test system resilience against cyber threats.", 
-    icon: <Search /> ,
-    details:"Our Vulnerability Management & Penetration Testing services provide comprehensive solutions to identify and address potential security risks in your infrastructure. Through regular vulnerability assessments, we scan your systems to detect weaknesses and prioritize remediation efforts. In addition, our expert penetration testing simulates real-world cyberattacks to uncover exploitable flaws in your defenses. These services help you stay ahead of evolving threats, ensuring your network is secure, resilient, and fully protected against attacks."
   },
   { title: "Managed SIEM (Security Information and Event Management)", 
     description: "Real-time monitoring and analysis of security events to detect and respond to threats.", 
@@ -100,11 +106,6 @@ const allServices = [
     icon: <GlobeLock />,
     details:"Protect your business from the ever-evolving world of cyber threats with our comprehensive Cyber Security Services. Our offerings include incident management, real-time threat response, remediation, data encryption, and advanced threat intelligence. We also provide risk assessments, vulnerability scanning, and continuous monitoring to proactively detect and address potential threats. From detecting and mitigating breaches to ensuring business continuity and compliance, we tailor our services to safeguard your organization from both internal and external cyber risks, giving you the peace of mind that your systems are always secure."
   },
-  { title: "Firewall Migration Services", 
-    description: "Seamlessly transition to next-gen firewalls with expert planning, configuration, and optimization, ensuring enhanced security and minimal downtime.", 
-    icon: <GlobeLock />,
-    details:"Our Firewall Migration Service ensures a seamless transition to next-gen firewalls with minimal downtime and maximum security. Our certified experts handle every aspect of the migration, from planning and configuration to testing and optimization. Whether you’re moving to Fortinet, Cisco, Palo Alto, Checkpoint, or other leading firewall solutions, we ensure your new system is fully integrated and optimized for your network.We work closely with your team to ensure a smooth migration that preserves your security policies and settings. Our professionals manage the entire process, from initial assessment and vendor-specific configurations to post-migration monitoring and fine-tuning. With our Firewall Migration Service, you gain enhanced network security, improved performance, and a robust firewall solution that keeps your business protected against evolving threats."
-  },
   { title: "Security Hardening Services", 
     description: "Strengthen your network and systems by eliminating vulnerabilities, securing endpoints, and optimizing security controls for robust protection against evolving threats.", 
     icon: <GlobeLock />,
@@ -136,7 +137,8 @@ const AllServices = () => {
 
         <div className="services-grid">
           {allServices.map((service, index) => (
-            <div key={index} className="service-card" onClick={() => openModal(service)} >
+            <div key={index} className="service-card"  >
+              <span onClick={() => openModal(service)}><HiOutlineQuestionMarkCircle /></span>
               <div className="icon-wrapper" >{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
@@ -144,8 +146,10 @@ const AllServices = () => {
           ))}
         </div>
 
-        <div className="back-home">
-          <Link to="/" className="view-all-button">Go Back</Link>
+        <div className="view-all">
+          <Link to="/" className="view-all-button">
+          <GiReturnArrow />
+          </Link>
         </div>
 
         {modalOpen && selectedService && (

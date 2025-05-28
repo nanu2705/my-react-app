@@ -4,8 +4,9 @@ import "./Terms.scss";
 const Terms = () => {
   return (
     <div className="terms-container">
-      <h1 className="terms-title">Terms and Conditions</h1>
-      
+      <div className="terms-title"><h1>Terms and Conditions</h1>
+        <p>Last Updated May 23rd,2025</p>
+      </div>
       <div className="terms-section">
         <h2 className="terms-section-title">Introduction</h2>
         <p className="terms-text">
@@ -23,14 +24,14 @@ const Terms = () => {
       <div className="terms-section">
         <h2 className="terms-section-title">Intellectual Property</h2>
         <p className="terms-text">
-          All content, designs, logos, trademarks, text, images, and other materials found on this website are the intellectual property of Prathmesh Cyber Force Pvt Ltd and are protected by applicable copyright and trademark laws. You may not copy, reproduce, distribute, or use any materials from this website without prior written consent from us.
+          All content, designs, logos, trademarks, text, images, and other materials found on this website are the intellectual property of <strong> Prathmesh Cyber Force Pvt Ltd</strong> and are protected by applicable copyright and trademark laws. You may not copy, reproduce, distribute, or use any materials from this website without prior written consent from us.
         </p>
       </div>
 
       <div className="terms-section">
         <h2 className="terms-section-title">Limitation of Liability</h2>
         <p className="terms-text">
-          To the fullest extent permitted by law, Prathmesh Cyber Force Pvt Ltd shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use or inability to use this website, including, but not limited to, errors, inaccuracies, interruptions, or any loss of data.
+          To the fullest extent permitted by law, <strong>Prathmesh Cyber Force Pvt Ltd</strong> shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use or inability to use this website, including, but not limited to, errors, inaccuracies, interruptions, or any loss of data.
         </p>
       </div>
 
@@ -44,7 +45,7 @@ const Terms = () => {
       <div className="terms-section">
         <h2 className="terms-section-title">Indemnification</h2>
         <p className="terms-text">
-          You agree to indemnify and hold Prathmesh Cyber Force Pvt Ltd harmless from any claims, damages, or expenses (including legal fees) arising from your violation of these terms and conditions or any actions related to your use of the website.
+          You agree to indemnify and hold <strong>Prathmesh Cyber Force Pvt Ltd</strong> harmless from any claims, damages, or expenses (including legal fees) arising from your violation of these terms and conditions or any actions related to your use of the website.
         </p>
       </div>
 

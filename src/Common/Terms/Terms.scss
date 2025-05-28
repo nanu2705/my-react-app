@@ -1,14 +1,41 @@
+@import "../Mixin.scss";
+
 .terms-container {
-    max-width: 800px;
-    margin: 40px auto 0;
+    max-width: 1200px;
+    margin: 80px auto ;
     padding: 20px;
     font-family: Arial, sans-serif;
   }
   
   .terms-title {
+
+    h1{
+  text-align: center;
+  color: #007bff;
+  line-height: 0;
+  font-size: 35px;
+
+  @include max768{
+    font-size: 25px;
+  }
+  @include max400{
+    font-size: 20px;  
+  }
+    }
+   
+     p{
     text-align: center;
-    color: #007bff;
+    font-size: 13px;
     margin-bottom: 20px;
+
+     @include max768{
+    font-size: 12px;
+  }
+  @include max400{
+    font-size: 10px;  
+  }
+  }
+
   }
   
   .terms-section {

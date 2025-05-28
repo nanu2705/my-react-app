@@ -1,51 +1,46 @@
 import React from "react";
 import "./Section7.scss";
-import step1 from "../../Assets/step1.png"
-import step3 from "../../Assets/step2.png"
-import step2 from "../../Assets/step3.png"
+import { FaLock, FaTools, FaShieldAlt } from "react-icons/fa";
+
 const Section7 = () => {
   const steps = [
     {
-      stepNumber: "1",
-      icon:step1,
+      icon: <FaLock />,
       title: "Identify Your Security Needs",
       description:
-        "Begin with a comprehensive assessment of your network, cloud, and endpoint security requirements. Choose from our wide range of services, including Network Consulting, Security Consulting, and Vulnerability Management, to build a customized security plan.",
-      highlights: "Network Consulting, Security Consulting, Vulnerability Management",
+        "Assess current risks and define what digital assets need protection.",
+      step: "Step 1",
+      button: "Start Here"
     },
     {
-      stepNumber: "2",
-      icon:step2,
-      title: "Implement Robust Security Measures",
+      icon: <FaTools />,
+      title: "Implement Security Measures",
       description:
-        "Leverage our expert security services like Firewall Deployment, Migration, Zero Trust Access, Endpoint Security, and Penetration Testing to proactively fortify your systems. Prepare for a rigorous security evaluation with our Managed SOC services.",
-      highlights: "Firewall Deployment, Zero Trust Access, Penetration Testing, Managed SOC services",
+        "Apply firewalls, antivirus, encryption, and access controls effectively.",
+      step: "Step 2",
+      button: "Apply Measures"
     },
     {
-      stepNumber: "3",
-      icon:step3,
-      title: "Achieve Ongoing Security Excellence",
+      icon: <FaShieldAlt />,
+      title: "Achieve Ongoing Security",
       description:
-        "Receive detailed analysis and actionable insights from our Managed NOC & SOC, Service Desk, and Desktop Management support. Benefit from Patch Management, Server Management, and Expert As a Service (EaaS) to ensure continuous monitoring and optimization of your security infrastructure.",
-      highlights: "Managed NOC & SOC, Patch Management, Expert As a Service (EaaS)",
-    },
+        "Monitor, update and audit your cybersecurity strategy regularly.",
+      step: "Step 3",
+      button: "Stay Secure"
+    }
   ];
 
   return (
-    <div className="security-steps">
-      <h2 className="section-title">Our Security Process</h2>
-      <div className="steps-container">
+    <div className="cyber-steps-container">
+      <h2 className="title">Our Security Process</h2>
+      <div className="steps-wrapper">
         {steps.map((step, index) => (
-          <div key={index} className={`step-card step-${index + 1}`}>
-            <div className="step-number">{step.stepNumber}
-            <img src={step.icon} alt="icon" />
-            </div>
-            
-            <div className="step-content">
-              <h3 className="step-title">{step.title}</h3>
-              <p className="step-description">{step.description}</p>
-              <div className="step-highlights">{step.highlights}</div>
-            </div>
+          <div className="step-card" key={index}>
+            <div className="step-icon">{step.icon}</div>
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+            <span className="step-label">{step.step}</span>
+            <button className="step-button">{step.button}</button>
           </div>
         ))}
       </div>

@@ -4,6 +4,12 @@
     }
 }
 
+@mixin max768{
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+
 @mixin max725{
     @media only screen and (max-width: 725px) {
         @content;

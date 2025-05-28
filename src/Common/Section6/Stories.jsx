@@ -14,6 +14,7 @@ const Stories = () => {
   const successStories = [
     {
       img: story1,
+      alt:"Network Migration",
       service: "Network Migration",
       story: "Smooth Network Transition for International Healthcare Provider",
       industry: "Healthcare",
@@ -26,6 +27,7 @@ const Stories = () => {
     },
     {
       img: story3,
+      alt: "Managed SOC & NOC",
       service: "Managed SOC & NOC",
       story: "24/7 Managed NOC & SOC for Telecommunications Leader",
       industry: "Telecommunications",
@@ -38,6 +40,7 @@ const Stories = () => {
     },
     {
       img: story2,
+      alt: "Firewall Migration",
       service: "Firewall Migration",
       story: "Firewall Migration for Financial Institution",
       industry: "Finance",
@@ -50,6 +53,7 @@ const Stories = () => {
     },
     {
       img: story4,
+      alt: "Fortinet End-to-End Solutions",
       service: "Fortinet End-to-End Solutions",
       story: "End-to-End Fortinet Solution for Global Manufacturing Firm",
       industry: "Manufacturing",
@@ -62,6 +66,7 @@ const Stories = () => {
     },
     {
       img:story5,
+      alt: "Cisco Expertise",
       service: "Cisco Expertise",
       story: "Cisco Networking for International Educational Institution",
       industry: "Education",
@@ -74,6 +79,7 @@ const Stories = () => {
     },
     {
       img: story6,
+      alt: "IT Staffing Solutions",
       service: "IT Staffing (Outshore Staff)",
       story: "IT Staffing Solutions for Global IT Support Team",
       industry: "Information Technology",
@@ -86,6 +92,7 @@ const Stories = () => {
     },
     {
       img:story1,
+      alt: "Cloud Support & Security",
       service: "Cloud Support, Fortinet Firewall Deployment, Server Support",
       story: "Seamless Cloud Migration & Security for E-commerce Platform",
       industry: "E-commerce",

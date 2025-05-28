@@ -1,27 +1,27 @@
-import React, {  useState } from 'react'
-import "./Loader.scss"
-import img from "../../Assets/logo.png"
+import React, { useState, useEffect } from 'react';
+import "./Loader.scss";
+import img from "../../Assets/logo.png";
 
 const Loader = () => {
+  const [loadingin, setLoadingin] = useState(true);
 
-    const[loadingin,setLoadingin] =useState(true)
-    setTimeout(() => {
-        setLoadingin(false)
-    }, 3000);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoadingin(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-<>
-    {
-    loadingin &&
-    <div class="container-boxx">
-    <div class="box">
-       <img src={img} alt="" />
-    </div>
-</div>
-
-    }
+    <>
+      {loadingin && (
+        <div className="container-boxx">
+          <div className="box">
+            <div className="spinner"></div>
+            <img src={img} alt="logo" />
+          </div>
+        </div>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

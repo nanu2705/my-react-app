@@ -20,6 +20,11 @@
         font-weight: bold;
         color: #1e3a8a;
         margin-bottom: 1rem;
+
+        @include max400{
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
       }
   
       p {
@@ -51,7 +56,7 @@
       @media (min-width: 1024px) {
         grid-template-columns: repeat(3, 1fr);
       }
-    }
+    
   
     // Service Card Styling
     .service-card {
@@ -61,11 +66,19 @@
       padding: 2rem;    
       transition: box-shadow 0.3s ease-in-out;
       text-align: center;
-      cursor: pointer;
+      position: relative;
+      
       &:hover {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       }
   
+      span{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+        font-size: 20px;
+      }
       // Icon Styling
       .icon-wrapper {
         width: 3.5rem;
@@ -106,19 +119,10 @@
         margin-bottom: 1rem;
       }
   
-      .learn-more {
-        display: inline-block;
-        color: #2563eb;
-        font-weight: 600;
-        text-decoration: none;
-        transition: color 0.3s ease-in-out;
-  
-        &:hover {
-          color: #1e3a8a;
-        }
-      }
+      
     }
-  
+    }
+    
     // View All Button
     .view-all {
       margin-top: 3rem;
@@ -138,6 +142,19 @@
           background: #2563eb;
           color: white;
         }
+
+        .returns-icon {
+  font-size: 80px;      /* Adjust size */
+  color: #333;          /* Change color */
+  cursor: pointer;      /* Shows pointer on hover */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.return-icon:hover {
+  color: #007bff;       /* Change color on hover */
+  transform: rotate(180deg); /* Optional hover animation */
+}
+
       }
     }
   }

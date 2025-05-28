@@ -14,6 +14,7 @@ const Section6 = () => {
   const caseStudies = [
     {
       img: story1,
+      alt: "Managed SOC & NOC",
       service: "Managed SOC & NOC",
       story: "24/7 Managed NOC & SOC for Telecommunications Leader",
       industry: "Telecommunications",
@@ -26,6 +27,7 @@ const Section6 = () => {
     },
     {
       img: story2,
+      alt: "Firewall Migration",
       service: "Firewall Migration",
       story: "Firewall Migration for Financial Institution",
       industry: "Finance",
@@ -38,6 +40,7 @@ const Section6 = () => {
     },
     {
       img: story3,
+      alt: "Fortinet End-to-End Solutions",
       service: "Fortinet End-to-End Solutions",
       story: "End-to-End Fortinet Solution for Global Manufacturing Firm",
       industry: "Manufacturing",
@@ -66,7 +69,7 @@ const Section6 = () => {
           {caseStudies.map((study, index) => (
             <div key={index} className="case-study-card">
               <div className="case-study-icon">
-                <img src={study.img} alt="" />
+                <img src={study.img} alt={study.alt} />
               </div>
               <div className="case-study-content">
                 <div className="case-category">{study.service}</div>

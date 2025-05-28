@@ -19,7 +19,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="company-info">
             <div className="footer-headers">
-              <img src={logo} alt="" />
+              <img src={logo} alt="logo" />
               <h3>Prathmesh Cyber Force</h3>
               </div>
             <p className="footer-subtext">
@@ -31,7 +31,7 @@ const Footer = () => {
                 <FaFacebookSquare />
                 </svg>
               </a>
-              <a href="https://x.com/prathmeshcybe" className="social-icon" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/prathmeshcyber" className="social-icon" target="_blank" rel="noopener noreferrer">
                 <svg className="icon" fill="currentColor" viewBox="0 0 24 24">
                 <BsTwitterX />
                 </svg>
@@ -65,10 +65,10 @@ const Footer = () => {
           <div className="services">
             <h4 className="footer-header">Our Services</h4>
             <ul>
-              <li><span >Managed Network and Security Services</span></li>
-              <li><span >Server Management, Deployment, and Troubleshooting</span></li>
-              <li><span >Firewall Migration Services</span></li>
-              <li><span >Vulnerability Management & Penetration Testing</span></li>
+              <li><span onClick={() => navigate("/services")}>Managed Network and Security Services</span></li>
+              <li><span onClick={() => navigate("/services")}>Server Management, Deployment, and Troubleshooting</span></li>
+              <li><span onClick={() => navigate("/services")}>Firewall Migration Services</span></li>
+              <li><span onClick={() => navigate("/services")}>Vulnerability Management & Penetration Testing</span></li>
             </ul>
           </div>
 
@@ -76,7 +76,13 @@ const Footer = () => {
           <div className="contact-info">
             <h4 className="footer-header">Contact Us</h4>
             <ul>
-              <li>A2, Meghdoot Estate, Mahaveer Nagar, Bamroli Road, Godhra, Panchmahal 389001 Gujarat, India</li>
+            <a
+        href="https://www.google.com/maps?q=A2,+Meghdoot+Estate,+Mahaveer+Nagar,+Bamroli+Road,+Godhra,+Gujarat,+India"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        A2, Meghdoot Estate, Mahaveer Nagar, Bamroli Road, Godhra, Panchmahal 389001 Gujarat, India
+      </a>
              
               <li>
                 <a href="mailto:contactus@prathmeshcyberforce.com" style={{ textDecoration: 'none', color: 'inherit' }}>
