@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Section7.scss";
-import { FaLock, FaTools, FaShieldAlt } from "react-icons/fa";
+import { FaLock, FaTools, FaShieldAlt, FaCheckCircle } from "react-icons/fa";
 
 const Section7 = () => {
   const steps = [
@@ -9,40 +9,49 @@ const Section7 = () => {
       title: "Identify Your Security Needs",
       description:
         "Assess current risks and define what digital assets need protection.",
-      step: "Step 1",
-      button: "Start Here"
     },
     {
       icon: <FaTools />,
       title: "Implement Security Measures",
       description:
         "Apply firewalls, antivirus, encryption, and access controls effectively.",
-      step: "Step 2",
-      button: "Apply Measures"
     },
     {
       icon: <FaShieldAlt />,
       title: "Achieve Ongoing Security",
       description:
         "Monitor, update and audit your cybersecurity strategy regularly.",
-      step: "Step 3",
-      button: "Stay Secure"
+    },
+    {
+      icon: <FaCheckCircle />,
+      title: "Maintain Compliance",
+      description:
+        "Ensure your systems align with security policies and compliance standards.",
     }
   ];
 
+  const [activeStep, setActiveStep] = useState(0);
+
   return (
-    <div className="cyber-steps-container">
-      <h2 className="title">Our Security Process</h2>
-      <div className="steps-wrapper">
-        {steps.map((step, index) => (
-          <div className="step-card" key={index}>
-            <div className="step-icon">{step.icon}</div>
-            <h3>{step.title}</h3>
-            <p>{step.description}</p>
-            <span className="step-label">{step.step}</span>
-            <button className="step-button">{step.button}</button>
-          </div>
-        ))}
+    <div className="hud-section">
+      <div className="hud-frame">
+        <h3>Our Security Process</h3>
+        <div className="hud-content">
+          <div className="hud-icon">{steps[activeStep].icon}</div>
+          <h3>{steps[activeStep].title}</h3>
+          <p>{steps[activeStep].description}</p>
+        </div>
+        <div className="hud-steps">
+          {steps.map((_, idx) => (
+            <button
+              key={idx}
+              className={`hud-step-btn ${activeStep === idx ? "active" : ""}`}
+              onClick={() => setActiveStep(idx)}
+            >
+              Step {idx + 1}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

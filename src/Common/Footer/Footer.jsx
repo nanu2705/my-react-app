@@ -77,7 +77,7 @@ const Footer = () => {
             <h4 className="footer-header">Contact Us</h4>
             <ul>
             <a
-        href="https://www.google.com/maps?q=A2,+Meghdoot+Estate,+Mahaveer+Nagar,+Bamroli+Road,+Godhra,+Gujarat,+India"
+        href="https://maps.app.goo.gl/KZFPqBxNdHEMLVnx8"
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -45,7 +45,7 @@ const jobDetails = {
       "Access to continuous learning and professional development resources.",
       "Collaborative and innovative team atmosphere."
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 
   "palo-alto-engineer": {
@@ -90,7 +90,7 @@ const jobDetails = {
 "A supportive, dynamic team focused on continuous learning and growth.",
 "A collaborative and innovative environment where your contributions matter."
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 
   "cisco-security-engineer": {
@@ -138,7 +138,7 @@ const jobDetails = {
       "A culture of innovation, where your ideas and contributions matter.",
       
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 
   "cisco-data-center-engineer": {
@@ -186,7 +186,7 @@ const jobDetails = {
       "Access to continuous learning and professional development resources.",
       "Collaborative and inclusive team atmosphere where your contributions matter.",  
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 
   "fortinet-engineer": {
@@ -234,7 +234,7 @@ const jobDetails = {
       "Familiarity with automation tools and scripting (e.g., Ansible, Python) for managing security devices and configurations.",
       "Experience with other network security technologies (IDS/IPS, SIEM, DLP, etc.).      ",
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 
   "server-infrastructure-engineer": {
@@ -290,7 +290,7 @@ const jobDetails = {
       "A collaborative and inclusive team atmosphere where your contributions make a significant impact.",
       
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 
   "system-support-engineer": {
@@ -343,7 +343,7 @@ const jobDetails = {
       "A collaborative environment where your contributions directly impact client success.",
       
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 
   "noc-engineer": {
@@ -397,7 +397,7 @@ const jobDetails = {
       "Collaborative and inclusive team environment where your contributions are valued.",
       
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 
   "soc-engineer": {
@@ -452,7 +452,7 @@ const jobDetails = {
       "A collaborative environment where your contributions have a direct impact on client security and company success.",
       
     ],
-    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com."
+    applyInfo: "To apply, please submit your CV/resume at career@prathmeshcyberforce.com"
   },
 };
 

@@ -1,78 +1,87 @@
  @import "../Mixin.scss";
 
-.cyber-steps-container {
-  padding: 2rem;
-  background: linear-gradient(to right, #eef2f3, #f9fbfc);
-  text-align: center;
+.hud-section {
+  background: url("../../Assets/section7-bg1.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: #007bff;
+   min-height: 100vh;
 
-  .title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #0f1c3f;
-  }
+   @include max900{
+    padding: 20px;
+    min-height: 80vh;
+   }
 
-  .steps-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .step-card {
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    width: 280px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .hud-frame {
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
     position: relative;
+    // box-shadow: 0 0 10px #007bff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    }
-
-    .step-icon {
-      font-size: 3rem;
-      color: #0056b3;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      font-size: 1.3rem;
-      color: #1a1a1a;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 1rem;
-      line-height: 1.4;
-    }
-
-    .step-label {
-      display: block;
-      font-weight: 600;
+    h3{
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
       color: #007bff;
-      margin-bottom: 1rem;
+    }
+    .hud-content {
+      text-align: center;
+      padding: 20px;
+
+      .hud-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+        color: #007bff;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: black;
+        line-height: 1.6;
+      }
     }
 
-    .step-button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
+    .hud-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      width: 100%;
 
-      &:hover {
-        background-color: #0056b3;
+      .hud-step-btn {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px;
+        background-color: white;
+        border: 2px solid #007bff;
+        color: #007bff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &.active {
+          background-color: #007bff;
+          color: white;
+          font-weight: bold;
+        }
+
+        &:hover {
+          background-color: #00bcd4;
+          color: #000;
+        }
       }
     }
   }
 }
-

@@ -137,7 +137,7 @@ const AllServices = () => {
 
         <div className="services-grid">
           {allServices.map((service, index) => (
-            <div key={index} className="service-card"  >
+            <div key={index} className="service-card"  onClick={() => openModal(service)}>
               <span onClick={() => openModal(service)}><HiOutlineQuestionMarkCircle /></span>
               <div className="icon-wrapper" >{service.icon}</div>
               <h3>{service.title}</h3>

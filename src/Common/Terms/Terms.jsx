@@ -5,7 +5,7 @@ const Terms = () => {
   return (
     <div className="terms-container">
       <div className="terms-title"><h1>Terms and Conditions</h1>
-        <p>Last Updated May 23rd,2025</p>
+        
       </div>
       <div className="terms-section">
         <h2 className="terms-section-title">Introduction</h2>

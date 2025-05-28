@@ -5,10 +5,25 @@ import img from "../../Assets/logo.png";
 const Loader = () => {
   const [loadingin, setLoadingin] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoadingin(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+ 
+
+   useEffect(() => {
+    // Disable scrolling
+    if (loadingin) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    const timer = setTimeout(() => {
+      setLoadingin(false);
+    }, 1500);
+
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = 'auto'; // Ensure scroll is restored
+    };
+  }, [loadingin]);
 
   return (
     <>

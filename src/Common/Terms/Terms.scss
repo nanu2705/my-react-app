@@ -23,18 +23,6 @@
   }
     }
    
-     p{
-    text-align: center;
-    font-size: 13px;
-    margin-bottom: 20px;
-
-     @include max768{
-    font-size: 12px;
-  }
-  @include max400{
-    font-size: 10px;  
-  }
-  }
 
   }
   

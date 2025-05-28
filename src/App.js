@@ -24,8 +24,9 @@ function App() {
       
        <BrowserRouter>
        <MoveToTop/>
-       <Header/>
        <Loader/>
+       <Header/>
+       
        <Analytics/>
        <Routes>
 
