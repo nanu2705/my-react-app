@@ -17,7 +17,7 @@ const Loader = () => {
 
     const timer = setTimeout(() => {
       setLoadingin(false);
-    }, 1500);
+    }, 500);
 
     return () => {
       clearTimeout(timer);

@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.scss";
 import { FaShieldAlt, FaUserShield, FaTools, FaClock, FaClipboardCheck } from "react-icons/fa";
+import { HandshakeIcon } from "lucide-react";
 
 const About = () => {
   return (
@@ -46,6 +47,11 @@ const About = () => {
             <FaClock className="icon" />
             <h4>Round-the-Clock Monitoring</h4>
             <p>We provide 24/7 monitoring and dedicated support to ensure your network stays protected.</p>
+          </div>
+           <div className="feature">
+            <HandshakeIcon className="icon" />
+            <h4>Client-Centric Partnership</h4>
+            <p>We work as an extension of your team, offering transparent communication, dedicated support, and a commitment to your long-term success.</p>
           </div>
         </div>
       </div>
