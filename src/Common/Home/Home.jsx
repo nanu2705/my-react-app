@@ -8,11 +8,13 @@ import Section6 from '../Section6/Section6';
 import Section7 from '../Section7/Section7';
 import Contact from '../Contact/Contact';
 
+
 const Home = () => {
   
 
   return (
     <div>
+      
       <Section1 />
       <Section2 />
       <Section3 /> 

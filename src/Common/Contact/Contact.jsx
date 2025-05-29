@@ -2,6 +2,7 @@ import React from 'react';
 import './Contact.scss';
 import img from "../../Assets/rlogo.png";
 
+
 const Contact = () => {
   // const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
@@ -19,6 +20,8 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+
+
       <div className="contact-image">
         <h3>Get In Touch</h3>
         <span>Protect your business from cyber threats with Prathmesh Cyber Force. Contact us today for a free consultation and discover how we can secure your digital assets with cutting-edge cybersecurity solutions.</span>

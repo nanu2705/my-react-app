@@ -4,6 +4,7 @@ import "./Terms.scss";
 const Terms = () => {
   return (
     <div className="terms-container">
+    
       <div className="terms-title"><h1>Terms and Conditions</h1>
         
       </div>

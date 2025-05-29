@@ -466,6 +466,8 @@ const RoleDetail = () => {
 
   return (
     <>
+
+     
     <div className="role-detail-container">
       <h1 className="role-title">{roleData.title}</h1>
       <h3 className="role-location">Location: {roleData.location}</h3>

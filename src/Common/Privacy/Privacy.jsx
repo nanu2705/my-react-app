@@ -4,6 +4,8 @@ import "./Privacy.scss";
 const Privacy = () => {
     return (
       <div className="privacy-policy-container">
+
+      
         <div className="privacy-policy-title"><h1>Privacy Policy</h1>
        
         </div>

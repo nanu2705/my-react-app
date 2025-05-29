@@ -2,7 +2,6 @@ import React from 'react'
 import "./Career.scss"
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import img from "../../Assets/job.jpg"
-import { Link } from "react-router-dom";
 
 const jobRoles = [
   { title: "Checkpoint Engineer" },
@@ -20,7 +19,8 @@ const jobRoles = [
 const Career = () => {
   return (
     <div className='career-main'>
-    
+   
+
       <div className='career-heading'>
         <h1>Careers</h1>
 
@@ -83,13 +83,13 @@ const Career = () => {
 
         <div className="career-positions-grid">
           {jobRoles.map((role, index) => (
-            <Link to={`/career/${role.title.replace(/\s+/g, "-").toLowerCase()}`} key={index} className="career-positions-card">
+            <a href={`/career/${role.title.replace(/\s+/g, "-").toLowerCase()}`}  key={index} className="career-positions-card">
               <div className="career-image">
                 <img src={img} alt={role.title} />
               </div>
               <span>{role.title}</span>
         
-            </Link>
+            </a>
           ))}
         </div>
       </div>

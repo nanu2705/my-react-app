@@ -6,6 +6,8 @@ import { HandshakeIcon } from "lucide-react";
 const About = () => {
   return (
     <div className="about-us">
+
+
       <div className="container">
         <h2 className="heading">Your Strategic Partner in Cybersecurity Excellence</h2>
         <p className="description">
