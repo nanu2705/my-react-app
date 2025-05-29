@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.scss';
 import img from "../../Assets/rlogo.png";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  // const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // const handleChange = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
