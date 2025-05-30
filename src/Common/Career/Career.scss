@@ -1,4 +1,4 @@
-
+@import "../Mixin.scss";
 
 .career-main{
      max-width: 1200px;
@@ -42,6 +42,12 @@
             // border-radius: 10px;
             padding: 10px;
 
+      @include max525{
+            grid-template-columns: repeat(2, 1fr);
+            }
+      @include max400{
+            grid-template-columns: repeat(1, 1fr);
+            }
 
          .career-opportunities-card{
             border: 1px solid black;
