@@ -33,7 +33,7 @@ const Career = () => {
           <p>Ready to make an impact in the world of cybersecurity? Apply today and become part of a team that protects what matters most in the digital age.</p>
          
         </div>
-        <button className='join-btn'><a href="mailto:career@prathmeshcyberforce.com" style={{ textDecoration: 'none', color: 'inherit' }}>JOIN US</a></button>
+        <a href="mailto:career@prathmeshcyberforce.com" className='join-btn' style={{ textDecoration: 'none', color: 'inherit' }}>JOIN US</a>
       </div>
 
       <div className="career-details">
